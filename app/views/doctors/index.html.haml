@@ -1,0 +1,14 @@
+.maincont
+    %h3= "List of Doctors"
+    %table
+        %tr
+            %th
+                ="SN"
+            %th
+                ="FullName"
+            %th
+                = ""
+        = render :partial => "list", :collection => @doctors
+
+    = link_to "Create New", new_doctor_path
+o 
