@@ -14,8 +14,10 @@ Scenario: Create Doctor
     Then I fill in "Full Name" with "Bishu"
     Then I fill in "Address" with "Kathmandu,Nepal"
     When I press "Create New"
-    Then I should see "Doctor successfully updated"
-    And I should be on the list of doctors
+    Then I should see "Bishu successfully created"
+    And I should see "Bishu"
+    And I should see "Kathmandu,Nepal"
+   
 
 Scenario: Edit Doctor
     Given I am on the list of doctors

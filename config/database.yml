@@ -9,8 +9,8 @@ development:
   reconnect: false
   database: HProject2_development
   pool: 5
-  username: mob
-  password: mob123
+  username: root
+  password: root
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -22,8 +22,8 @@ test: &test
   reconnect: false
   database: HProject2_test
   pool: 5
-  username: mob
-  password: mob123
+  username: root
+  password: root
   host: localhost
 
 production:
@@ -32,8 +32,8 @@ production:
   reconnect: false
   database: HProject2_production
   pool: 5
-  username: mob
-  password: mob123
+  username: root
+  password: root
   host: localhost
 
 
