@@ -21,8 +21,12 @@ Scenario: Create Doctor
     
 Scenario: Edit Doctor
     Given I am on the list of doctors
-    When I follow "Edit"
-    Then I fill in "Address" with "Kathmandu,Nepal"
+    Given the following doctor records
+     |full_name|address|
+     |Ram|Kathmandu,Nepal|
+     |Shyam|Butwal,Nepal|
+    Then I am on Edit "Ram" I
+    Then I fill in "Address" with "Biratnagar,Nepal"
     When I press "Update"
     Then I should see "Doctor successfully updated"
-    And I should be on the list of doctors
+     And I should see "Biratnagar,Nepal"
