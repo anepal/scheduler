@@ -1090,3 +1090,1207 @@ Rendering departments/index
 Rendered layouts/_header (0.2ms)
 Rendered layouts/_footer (0.2ms)
 Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/departments]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DepartmentsController#index (for 127.0.0.1 at 2010-09-13 16:27:34) [GET]
+  [4;36;1mDepartment Load (0.2ms)[0m   [0;1mSELECT * FROM `departments` [0m
+Rendering template within layouts/application
+Rendering departments/index
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/departments]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DepartmentsController#new (for 127.0.0.1 at 2010-09-13 16:27:37) [GET]
+  [4;35;1mDepartment Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `departments`[0m
+
+ActionView::MissingTemplate (Missing template departments/new.erb in view path app/views):
+  haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DepartmentsController#new (for 127.0.0.1 at 2010-09-13 16:28:33) [GET]
+  [4;36;1mDepartment Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `departments`[0m
+
+ActionView::MissingTemplate (Missing template departments/new.erb in view path app/views):
+  haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#new (for 127.0.0.1 at 2010-09-13 16:28:40) [GET]
+  [4;35;1mDoctor Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+Rendering template within layouts/application
+Rendering doctors/new
+Rendered doctors/_new (8.0ms)
+Rendered layouts/_header (0.1ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 24ms (View: 20, DB: 1) | 200 OK [http://localhost/doctors/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#create (for 127.0.0.1 at 2010-09-13 16:29:07) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu, Nepal", "phone"=>"8989888888", "full_name"=>"Bishnu Pandey", "email"=>"real1@gmail.com"}, "commit"=>"Create New", "authenticity_token"=>"5jo3exhUQDFc/wHgX1lNRDAvOcJyU5iI7atrKpaZLyE="}
+  [4;36;1mDoctor Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDoctor Exists (0.3ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishnu Pandey') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.4ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Kathmandu, Nepal', '2010-09-13 10:44:07', '2010-09-13 10:44:07', NULL, 'Bishnu Pandey', '8989888888', 'real1@gmail.com')[0m
+  [4;36;1mSQL (123.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/doctors/1
+Completed in 162ms (DB: 0) | 302 Found [http://localhost/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2010-09-13 16:29:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDoctor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mDoctor Load (0.3ms)[0m   [0;1mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/show
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 25ms (View: 17, DB: 2) | 200 OK [http://localhost/doctors/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 16:29:14) [GET]
+  [4;35;1mDoctor Load (0.4ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+  [4;36;1mDoctor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+Rendered doctors/_list (8.6ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 30ms (View: 23, DB: 2) | 200 OK [http://localhost/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#edit (for 127.0.0.1 at 2010-09-13 16:29:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDoctor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mDoctor Load (0.1ms)[0m   [0;1mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/edit
+Rendered doctors/_new (16.3ms)
+Rendered layouts/_header (0.1ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 90ms (View: 82, DB: 1) | 200 OK [http://localhost/doctors/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#create (for 127.0.0.1 at 2010-09-13 16:29:20) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu, Nepal", "phone"=>"8989888888", "full_name"=>"Bishnu Pandey", "email"=>"real1@gmail.com"}, "commit"=>"Save", "authenticity_token"=>"5jo3exhUQDFc/wHgX1lNRDAvOcJyU5iI7atrKpaZLyE="}
+  [4;35;1mDoctor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Exists (0.4ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishnu Pandey') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering doctors/new
+Rendered doctors/_new (3.9ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 28ms (View: 8, DB: 0) | 200 OK [http://localhost/doctors]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#create (for 127.0.0.1 at 2010-09-13 16:29:28) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu, Nepal", "phone"=>"8989888888", "full_name"=>"Bishnu Pandey", "email"=>"real1@gmail.com"}, "commit"=>"Create New", "authenticity_token"=>"5jo3exhUQDFc/wHgX1lNRDAvOcJyU5iI7atrKpaZLyE="}
+  [4;35;1mDoctor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Exists (0.3ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishnu Pandey') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering doctors/new
+Rendered doctors/_new (5.9ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 29ms (View: 10, DB: 0) | 200 OK [http://localhost/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#create (for 127.0.0.1 at 2010-09-13 16:29:54) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu, Nepal", "phone"=>"8989888888", "full_name"=>"Bishnu Pandey", "email"=>"real1@gmail.com"}, "commit"=>"Create New", "authenticity_token"=>"5jo3exhUQDFc/wHgX1lNRDAvOcJyU5iI7atrKpaZLyE="}
+  [4;35;1mDoctor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Exists (0.1ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishnu Pandey') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering doctors/new
+Rendered doctors/_new (2.1ms)
+Rendered layouts/_header (0.1ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 20ms (View: 4, DB: 0) | 200 OK [http://localhost/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 16:29:58) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+  [4;36;1mDoctor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+Rendered doctors/_list (6.1ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 16ms (View: 9, DB: 1) | 200 OK [http://localhost/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#edit (for 127.0.0.1 at 2010-09-13 16:30:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDoctor Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mDoctor Load (0.1ms)[0m   [0;1mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/edit
+Rendered doctors/_new (3.7ms)
+Rendered layouts/_header (0.1ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 12ms (View: 7, DB: 2) | 200 OK [http://localhost/doctors/1/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#create (for 127.0.0.1 at 2010-09-13 16:30:29) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu, Nepal", "phone"=>"8989888888", "full_name"=>"Bishnu Pandey", "email"=>"real1@gmail.com"}, "commit"=>"Save", "authenticity_token"=>"5jo3exhUQDFc/wHgX1lNRDAvOcJyU5iI7atrKpaZLyE="}
+  [4;35;1mDoctor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Exists (0.1ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishnu Pandey') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering doctors/new
+Rendered doctors/_new (4.1ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 28ms (View: 8, DB: 0) | 200 OK [http://localhost/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#create (for 127.0.0.1 at 2010-09-13 16:31:51) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu, Nepal", "phone"=>"8989888888", "full_name"=>"Bishnu Pandey", "email"=>"real1@gmail.com"}, "commit"=>"Save", "authenticity_token"=>"5jo3exhUQDFc/wHgX1lNRDAvOcJyU5iI7atrKpaZLyE="}
+  [4;35;1mDoctor Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Exists (0.1ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishnu Pandey') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering doctors/new
+Rendered doctors/_new (8.5ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 37ms (View: 17, DB: 0) | 200 OK [http://localhost/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 16:31:53) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+  [4;36;1mDoctor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+Rendered doctors/_list (6.0ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 16ms (View: 9, DB: 1) | 200 OK [http://localhost/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#new (for 127.0.0.1 at 2010-09-13 16:31:55) [GET]
+  [4;35;1mDoctor Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+Rendering template within layouts/application
+Rendering doctors/new
+Rendered doctors/_new (3.7ms)
+Rendered layouts/_header (0.1ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://localhost/doctors/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 16:32:03) [GET]
+  [4;36;1mDoctor Load (0.2ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+  [4;35;1mDoctor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+Rendered doctors/_list (5.8ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 15ms (View: 9, DB: 2) | 200 OK [http://localhost/doctors]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#edit (for 127.0.0.1 at 2010-09-13 16:32:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDoctor Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mDoctor Load (0.1ms)[0m   [0mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/edit
+Rendered doctors/_new (4.1ms)
+Rendered layouts/_header (0.1ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/doctors/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#1 (for 127.0.0.1 at 2010-09-13 16:32:08) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu, Nepal", "phone"=>"8989888888", "full_name"=>"Bishnu Pandey", "email"=>"real1@gmail.com"}, "commit"=>"Save", "authenticity_token"=>"5jo3exhUQDFc/wHgX1lNRDAvOcJyU5iI7atrKpaZLyE=", "id"=>"edit"}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#edit (for 127.0.0.1 at 2010-09-13 16:33:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDoctor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mDoctor Load (0.1ms)[0m   [0mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/edit
+
+ActionView::TemplateError (Indenting at the beginning of the document is illegal.) on line #1 of app/views/doctors/_new.html.haml:
+1:     = f.label :full_name, "Full Name:"
+2:     %br
+3:     = f.text_field :full_name
+4:     %br
+
+    app/views/doctors/_new.html.haml:1
+    haml (3.0.18) lib/haml/precompiler.rb:167:in `precompile'
+    haml (3.0.18) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:11:in `render'
+    haml (3.0.18) lib/haml/helpers.rb:90:in `non_haml'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:11:in `render'
+    app/views/doctors/edit.html.haml:4:in `_run_haml_app47views47doctors47edit46html46haml'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:229:in `call'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:229:in `form_for'
+    haml (3.0.18) lib/haml/helpers.rb:588:in `call'
+    haml (3.0.18) lib/haml/helpers.rb:588:in `haml_bind_proc'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:235:in `form_for'
+    app/views/doctors/edit.html.haml:3:in `_run_haml_app47views47doctors47edit46html46haml'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (140.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#edit (for 127.0.0.1 at 2010-09-13 16:34:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDoctor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mDoctor Load (0.1ms)[0m   [0mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/edit
+
+ActionView::TemplateError (undefined local variable or method `f' for #<ActionView::Base:0xb72a8188>) on line #1 of app/views/doctors/_new.html.haml:
+1: = f.label :full_name, "Full Name:"
+2: %br
+3: = f.text_field :full_name
+4: %br
+
+    app/views/doctors/_new.html.haml:1:in `_run_haml_app47views47doctors47_new46html46haml_locals_btn_new_object'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:11:in `render'
+    haml (3.0.18) lib/haml/helpers.rb:90:in `non_haml'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:11:in `render'
+    app/views/doctors/edit.html.haml:4:in `_run_haml_app47views47doctors47edit46html46haml'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:229:in `call'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:229:in `form_for'
+    haml (3.0.18) lib/haml/helpers.rb:588:in `call'
+    haml (3.0.18) lib/haml/helpers.rb:588:in `haml_bind_proc'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:235:in `form_for'
+    app/views/doctors/edit.html.haml:3:in `_run_haml_app47views47doctors47edit46html46haml'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (85.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#edit (for 127.0.0.1 at 2010-09-13 16:35:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDoctor Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mDoctor Load (0.1ms)[0m   [0mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/edit
+Rendered doctors/_new (6.8ms)
+Rendered layouts/_header (0.1ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://localhost/doctors/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#1 (for 127.0.0.1 at 2010-09-13 16:35:42) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu, Nepal", "phone"=>"8989888888", "full_name"=>"Bishnu Pandey", "email"=>"real1@gmail.com"}, "commit"=>"Save", "authenticity_token"=>"5jo3exhUQDFc/wHgX1lNRDAvOcJyU5iI7atrKpaZLyE="}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 16:35:47) [GET]
+  [4;36;1mDoctor Load (0.2ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+  [4;35;1mDoctor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+Rendered doctors/_list (6.0ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 16ms (View: 9, DB: 1) | 200 OK [http://localhost/doctors/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#edit (for 127.0.0.1 at 2010-09-13 16:35:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDoctor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mDoctor Load (0.1ms)[0m   [0mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/edit
+Rendered doctors/_new (6.4ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/doctors/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#1 (for 127.0.0.1 at 2010-09-13 16:35:51) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu, Nepal", "phone"=>"8989888888", "full_name"=>"Bishnu Pandey", "email"=>"real1@gmail.com"}, "commit"=>"Save", "authenticity_token"=>"5jo3exhUQDFc/wHgX1lNRDAvOcJyU5iI7atrKpaZLyE="}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2010-09-13 16:36:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDoctor Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mDoctor Load (0.1ms)[0m   [0mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/show
+Rendered layouts/_header (0.1ms)
+Rendered layouts/_footer (15.4ms)
+Completed in 25ms (View: 20, DB: 1) | 200 OK [http://localhost/doctors/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2010-09-13 16:37:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDoctor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mDoctor Load (0.1ms)[0m   [0mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/show
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 15ms (View: 7, DB: 1) | 200 OK [http://localhost/doctors/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 16:37:08) [GET]
+  [4;36;1mDoctor Load (0.2ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+  [4;35;1mDoctor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+Rendered doctors/_list (5.9ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 16ms (View: 9, DB: 1) | 200 OK [http://localhost/doctors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#edit (for 127.0.0.1 at 2010-09-13 16:37:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDoctor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mDoctor Load (0.1ms)[0m   [0mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/edit
+Rendered doctors/_new (6.2ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://localhost/doctors/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#1 (for 127.0.0.1 at 2010-09-13 16:37:12) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu, Nepal", "phone"=>"8989888888", "full_name"=>"Bishnu Pandey", "email"=>"real1@gmail.com"}, "commit"=>"Save", "authenticity_token"=>"5jo3exhUQDFc/wHgX1lNRDAvOcJyU5iI7atrKpaZLyE="}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#1 (for 127.0.0.1 at 2010-09-13 16:37:22) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu, Nepal", "phone"=>"8989888888", "full_name"=>"Bishnu Pandey", "email"=>"real1@gmail.com"}, "commit"=>"Save", "authenticity_token"=>"5jo3exhUQDFc/wHgX1lNRDAvOcJyU5iI7atrKpaZLyE="}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2010-09-13 16:37:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDoctor Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mDoctor Load (0.1ms)[0m   [0mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/show
+Rendered layouts/_header (0.1ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 10ms (View: 4, DB: 1) | 200 OK [http://localhost/doctors/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#edit (for 127.0.0.1 at 2010-09-13 16:37:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDoctor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mDoctor Load (0.1ms)[0m   [0mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/edit
+Rendered doctors/_new (6.4ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/doctors/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#1 (for 127.0.0.1 at 2010-09-13 16:37:45) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu, Nepals", "phone"=>"8989888888", "full_name"=>"Bishnu Pandey", "email"=>"real1@gmail.com"}, "commit"=>"Save", "authenticity_token"=>"5jo3exhUQDFc/wHgX1lNRDAvOcJyU5iI7atrKpaZLyE="}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2010-09-13 16:37:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDoctor Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mDoctor Load (0.1ms)[0m   [0mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/show
+Rendered layouts/_header (0.1ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 10ms (View: 4, DB: 1) | 200 OK [http://localhost/doctors/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#edit (for 127.0.0.1 at 2010-09-13 16:37:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDoctor Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/edit
+Rendered doctors/_new (6.3ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/doctors/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#edit (for 127.0.0.1 at 2010-09-13 16:37:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDoctor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mDoctor Load (0.1ms)[0m   [0mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/edit
+Rendered doctors/_new (75.6ms)
+Rendered layouts/_header (0.1ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 87ms (View: 79, DB: 1) | 200 OK [http://localhost/doctors/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#1 (for 127.0.0.1 at 2010-09-13 16:38:00) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu, Nepal", "phone"=>"8989888888", "full_name"=>"Bishnu Pandey", "email"=>"real1@gmail.com"}, "commit"=>"Save", "authenticity_token"=>"5jo3exhUQDFc/wHgX1lNRDAvOcJyU5iI7atrKpaZLyE="}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2010-09-13 16:38:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDoctor Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mDoctor Load (0.1ms)[0m   [0mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/show
+Rendered layouts/_header (0.1ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 43ms (View: 38, DB: 1) | 200 OK [http://localhost/doctors/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#edit (for 127.0.0.1 at 2010-09-13 16:38:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDoctor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mDoctor Load (0.1ms)[0m   [0mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/edit
+Rendered doctors/_new (6.4ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 24ms (View: 17, DB: 1) | 200 OK [http://localhost/doctors/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#edit (for 127.0.0.1 at 2010-09-13 16:54:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDoctor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mDoctor Load (0.1ms)[0m   [0mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/edit
+Rendered doctors/_new (6.3ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 24ms (View: 17, DB: 1) | 200 OK [http://localhost/doctors/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#1 (for 127.0.0.1 at 2010-09-13 16:55:01) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu, Nepal", "phone"=>"8989888888", "full_name"=>"Bishnu Pandey", "email"=>"real1@gmail.com"}, "commit"=>"Save", "authenticity_token"=>"Xp8sjS23jSPzUc40EFdv7cRcNXr5fPrPFP8EHbky5fI="}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#1 (for 127.0.0.1 at 2010-09-13 16:56:38) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu, Nepal", "phone"=>"8989888888", "full_name"=>"Bishnu Pandey", "email"=>"real1@gmail.com"}, "commit"=>"Save", "authenticity_token"=>"Xp8sjS23jSPzUc40EFdv7cRcNXr5fPrPFP8EHbky5fI="}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#1 (for 127.0.0.1 at 2010-09-13 16:56:48) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu, Nepal", "phone"=>"8989888888", "full_name"=>"Bishnu Pandey", "email"=>"real1@gmail.com"}, "commit"=>"Save", "authenticity_token"=>"Xp8sjS23jSPzUc40EFdv7cRcNXr5fPrPFP8EHbky5fI="}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2010-09-13 16:56:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDoctor Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mDoctor Load (0.1ms)[0m   [0mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/show
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 17ms (View: 8, DB: 2) | 200 OK [http://localhost/doctors/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#edit (for 127.0.0.1 at 2010-09-13 16:57:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDoctor Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mDoctor Load (0.1ms)[0m   [0mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/edit
+Rendered doctors/_new (6.1ms)
+Rendered layouts/_header (0.5ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 20ms (View: 11, DB: 2) | 200 OK [http://localhost/doctors/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#1 (for 127.0.0.1 at 2010-09-13 16:59:37) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu, Nepal", "phone"=>"8989888888", "full_name"=>"Bishnu Pandey", "email"=>"real1@gmail.com"}, "commit"=>"Save", "authenticity_token"=>"5jo3exhUQDFc/wHgX1lNRDAvOcJyU5iI7atrKpaZLyE="}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#edit (for 127.0.0.1 at 2010-09-13 16:59:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDoctor Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mDoctor Load (0.1ms)[0m   [0mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/edit
+Rendered doctors/_new (6.7ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/doctors/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#1 (for 127.0.0.1 at 2010-09-13 16:59:44) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu, Nepal", "phone"=>"8989888888", "full_name"=>"Bishnu Pandey", "email"=>"real1@gmail.com"}, "commit"=>"Save", "authenticity_token"=>"5jo3exhUQDFc/wHgX1lNRDAvOcJyU5iI7atrKpaZLyE="}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#1 (for 127.0.0.1 at 2010-09-13 17:02:06) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu, Nepal", "phone"=>"8989888888", "full_name"=>"Bishnu Pandey", "email"=>"real1@gmail.com"}, "commit"=>"Save", "authenticity_token"=>"5jo3exhUQDFc/wHgX1lNRDAvOcJyU5iI7atrKpaZLyE="}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2010-09-13 17:02:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDoctor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mDoctor Load (0.1ms)[0m   [0mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/show
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 15ms (View: 7, DB: 1) | 200 OK [http://localhost/doctors/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#edit (for 127.0.0.1 at 2010-09-13 17:02:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDoctor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mDoctor Load (0.1ms)[0m   [0mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/edit
+Rendered doctors/_new (11.0ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 27ms (View: 19, DB: 1) | 200 OK [http://localhost/doctors/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#update (for 127.0.0.1 at 2010-09-13 17:02:12) [PUT]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu, Nepal", "phone"=>"8989888888", "full_name"=>"Bishnu Pandey", "email"=>"real1@gmail.com"}, "commit"=>"Save", "authenticity_token"=>"5jo3exhUQDFc/wHgX1lNRDAvOcJyU5iI7atrKpaZLyE=", "id"=>"1"}
+  [4;36;1mDoctor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mDoctor Load (0.1ms)[0m   [0mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Exists (0.3ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishnu Pandey' AND `doctors`.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/doctors/1
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/doctors/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2010-09-13 17:02:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDoctor Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mDoctor Load (0.1ms)[0m   [0;1mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/show
+Rendered layouts/_header (0.1ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/doctors/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#edit (for 127.0.0.1 at 2010-09-13 17:02:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDoctor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mDoctor Load (0.1ms)[0m   [0;1mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/edit
+Rendered doctors/_new (6.8ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 20ms (View: 11, DB: 1) | 200 OK [http://localhost/doctors/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#update (for 127.0.0.1 at 2010-09-13 17:02:30) [PUT]
+  Parameters: {"doctor"=>{"address"=>"Maharajgunj, Nepal", "phone"=>"8989888888", "full_name"=>"Bishnu Pandey", "email"=>"real1@gmail.com"}, "commit"=>"Save", "authenticity_token"=>"5jo3exhUQDFc/wHgX1lNRDAvOcJyU5iI7atrKpaZLyE=", "id"=>"1"}
+  [4;35;1mDoctor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mDoctor Load (1.5ms)[0m   [0;1mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDoctor Exists (0.1ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishnu Pandey' AND `doctors`.id <> 1) LIMIT 1[0m
+  [4;35;1mDoctor Update (23.0ms)[0m   [0mUPDATE `doctors` SET `updated_at` = '2010-09-13 11:17:30', `address` = 'Maharajgunj, Nepal' WHERE `id` = 1[0m
+  [4;36;1mSQL (51.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/doctors/1
+Completed in 97ms (DB: 0) | 302 Found [http://localhost/doctors/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2010-09-13 17:02:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDoctor Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mDoctor Load (0.3ms)[0m   [0;1mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/show
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 16ms (View: 7, DB: 2) | 200 OK [http://localhost/doctors/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 17:02:32) [GET]
+  [4;35;1mDoctor Load (0.4ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+  [4;36;1mDoctor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+Rendered doctors/_list (5.8ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 18ms (View: 11, DB: 2) | 200 OK [http://localhost/doctors]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#new (for 127.0.0.1 at 2010-09-13 17:02:35) [GET]
+  [4;35;1mDoctor Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+Rendering template within layouts/application
+Rendering doctors/new
+
+ActionView::TemplateError (doctor_url failed to generate from {:action=>"show", :controller=>"doctors", :id=>#<Doctor id: nil, full_name: nil, address: nil, phone: nil, email: nil, optional_info: nil, created_at: nil, updated_at: nil>}, expected: {:action=>"show", :controller=>"doctors"}, diff: {:id=>#<Doctor id: nil, full_name: nil, address: nil, phone: nil, email: nil, optional_info: nil, created_at: nil, updated_at: nil>}) on line #1 of app/views/doctors/_new.html.haml:
+1: - form_for :doctor, :url=>doctor_path(@doctor), :html=>{:method=>:put} do |f|
+2:     = f.label :full_name, "Full Name:"
+3:     %br
+4:     = f.text_field :full_name
+
+    (eval):16:in `doctor_path'
+    app/views/doctors/_new.html.haml:1:in `_run_haml_app47views47doctors47_new46html46haml_locals_action_btn_new_object'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:11:in `render'
+    haml (3.0.18) lib/haml/helpers.rb:90:in `non_haml'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:11:in `render'
+    app/views/doctors/new.html.haml:3:in `_run_haml_app47views47doctors47new46html46haml'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (74.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#new (for 127.0.0.1 at 2010-09-13 17:08:03) [GET]
+  [4;36;1mDoctor Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+Rendering template within layouts/application
+Rendering doctors/new
+Rendered doctors/_new (11.4ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 33ms (View: 25, DB: 3) | 200 OK [http://localhost/doctors/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#new (for 127.0.0.1 at 2010-09-13 17:08:06) [GET]
+  [4;35;1mDoctor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+Rendering template within layouts/application
+Rendering doctors/new
+Rendered doctors/_new (81.1ms)
+Rendered layouts/_header (0.1ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 92ms (View: 84, DB: 1) | 200 OK [http://localhost/doctors/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#edit (for 127.0.0.1 at 2010-09-13 17:08:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDoctor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mDoctor Load (0.1ms)[0m   [0mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/edit
+Rendered doctors/_new (7.7ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 27ms (View: 19, DB: 1) | 200 OK [http://localhost/doctors/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#edit (for 127.0.0.1 at 2010-09-13 17:08:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDoctor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mDoctor Load (0.1ms)[0m   [0mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/edit
+Rendered doctors/_new (7.6ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/doctors/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#update (for 127.0.0.1 at 2010-09-13 17:08:33) [PUT]
+  Parameters: {"doctor"=>{"address"=>"Maharajgunj, Nepal", "phone"=>"8989888888", "full_name"=>"Bishnu Pandey", "email"=>"real1@gmail.com"}, "commit"=>"Save", "authenticity_token"=>"Xp8sjS23jSPzUc40EFdv7cRcNXr5fPrPFP8EHbky5fI=", "id"=>"1"}
+  [4;36;1mDoctor Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mDoctor Load (0.1ms)[0m   [0mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Exists (0.3ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishnu Pandey' AND `doctors`.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/doctors/1
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/doctors/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2010-09-13 17:08:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDoctor Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mDoctor Load (0.1ms)[0m   [0;1mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/show
+Rendered layouts/_header (0.1ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://localhost/doctors/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#edit (for 127.0.0.1 at 2010-09-13 17:08:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDoctor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mDoctor Load (0.1ms)[0m   [0;1mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/edit
+Rendered doctors/_new (7.1ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/doctors/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 17:08:38) [GET]
+  [4;35;1mDoctor Load (0.1ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+  [4;36;1mDoctor Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+Rendered doctors/_list (3.8ms)
+Rendered layouts/_header (0.1ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://localhost/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#new (for 127.0.0.1 at 2010-09-13 17:08:40) [GET]
+  [4;35;1mDoctor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+Rendering template within layouts/application
+Rendering doctors/new
+Rendered doctors/_new (6.9ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/doctors/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#create (for 127.0.0.1 at 2010-09-13 17:09:12) [POST]
+  Parameters: {"doctor"=>{"address"=>"Putalisadak , Kathmandu", "phone"=>"983877772", "full_name"=>"Bisharjan Pokhrel", "email"=>"bish@bish.com"}, "commit"=>"Create New", "authenticity_token"=>"Xp8sjS23jSPzUc40EFdv7cRcNXr5fPrPFP8EHbky5fI="}
+  [4;36;1mDoctor Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDoctor Exists (0.3ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bisharjan Pokhrel') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.3ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Putalisadak , Kathmandu', '2010-09-13 11:24:12', '2010-09-13 11:24:12', NULL, 'Bisharjan Pokhrel', '983877772', 'bish@bish.com')[0m
+  [4;36;1mSQL (61.7ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/doctors/2
+Completed in 83ms (DB: 0) | 302 Found [http://localhost/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2010-09-13 17:09:13) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mDoctor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mDoctor Load (0.3ms)[0m   [0;1mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering doctors/show
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 15ms (View: 7, DB: 2) | 200 OK [http://localhost/doctors/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 17:09:16) [GET]
+  [4;35;1mDoctor Load (0.3ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+  [4;36;1mDoctor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+Rendered doctors/_list (4.1ms)
+Rendered doctors/_list (0.6ms)
+Rendered layouts/_header (0.1ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 14ms (View: 7, DB: 2) | 200 OK [http://localhost/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#edit (for 127.0.0.1 at 2010-09-13 17:09:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDoctor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mDoctor Load (0.3ms)[0m   [0;1mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/edit
+Rendered doctors/_new (83.6ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 96ms (View: 88, DB: 2) | 200 OK [http://localhost/doctors/1/edit]

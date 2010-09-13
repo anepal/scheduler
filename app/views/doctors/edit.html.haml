@@ -1,6 +1,7 @@
 .maincont
   %h3= 'Edit doctor'
-  = render :partial=>'new',:locals => { :btn => "Save" }
+  = render :partial=>'new',:locals => { :btn => "Save", :action => "update" }
+
   = link_to 'Create New', new_doctor_path
   = link_to 'Back', doctor_path
   = link_to 'Show All', doctors_path
