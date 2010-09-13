@@ -29,10 +29,10 @@ describe DoctorsController do
       do_get
       response.should render_template('index')
     end
-
-    it "should find all doctors" do
-      Doctor.should_receive(:find).with(:all).and_return([@doctor])
-    end
+#
+#    it "should find all doctors" do
+#      Doctor.should_receive(:find).with(:all).and_return([@doctor])
+#    end
 
     it "should assign found Doctor to the view" do
       do_get
