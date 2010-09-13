@@ -1,0 +1,18 @@
+- form_for :doctor, @doctor, :url => {:action => "create"} do |f|
+    = f.label :full_name, "Full Name:"
+    %br
+    = f.text_field :full_name
+    %br
+    = f.label :address, "Address:"
+    %br
+    = f.text_area :address
+    %br
+    = f.label :phone, "Phone:"
+    %br
+    = f.text_field :phone
+    %br
+    = f.label :email, "Email:"
+    %br
+    = f.text_field :email
+    %br
+    = f.submit btn

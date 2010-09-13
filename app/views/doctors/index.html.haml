@@ -1,14 +1,16 @@
 .maincont
     %h3= "List of Doctors"
     %table
-        %tr
-            %th
-                ="SN"
-            %th
-                ="FullName"
-            %th
-                = ""
-        = render :partial => "list", :collection => @doctors
-
+        - if @doctors.count>0
+            %tr
+                %th
+                    ="SN"
+                %th
+                    ="FullName"
+                %th
+                    = ""
+            = render :partial => "list", :collection => @doctors
+        - else
+            ="Doctors list is empty."
+      
     = link_to "Create New", new_doctor_path
-o 
