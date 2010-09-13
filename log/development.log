@@ -944,3 +944,35 @@ Rendered doctors/_new (6.1ms)
 Rendered layouts/_header (0.2ms)
 Rendered layouts/_footer (0.7ms)
 Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/doctors/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (43.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (160.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDoctors (20100911055119)
+Migrating to CreateDepartments (20100913072117)
+  [4;36;1mSQL (136.5ms)[0m   [0;1mCREATE TABLE `departments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `address` varchar(255), `phone` varchar(255), `optional_info` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (77.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100913072117')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (12.6ms)[0m   [0mSHOW FIELDS FROM `departments`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `departments`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `departments`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `doctors`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDoctors (20100911055119)
+Migrating to CreateDepartments (20100913072117)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW FIELDS FROM `departments`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `departments`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `departments`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `doctors`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `doctors`[0m

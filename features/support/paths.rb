@@ -13,9 +13,8 @@ module NavigationHelpers
     when /the list of doctors/
       doctors_path
 
-    when /the show doctor /
-      ''
-
+    when /the list of departments/
+      departments_path
       # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

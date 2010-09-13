@@ -1382,3 +1382,228 @@ Rendering template within layouts/application
 Rendering doctors/index
 Completed in 2ms (View: 1, DB: 1) | 200 OK [http://www.example.com/doctors]
   [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (29.1ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram') LIMIT 1[0m
+  [4;36;1mDoctor Create (45.9ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-13 04:25:57', '2010-09-13 04:25:57', NULL, 'Ram', NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (1.7ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram' AND `doctors`.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.3ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.2ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-13 04:25:57', '2010-09-13 04:25:57', NULL, 'Shyam', NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.3ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam' AND `doctors`.id <> 2) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 10:10:57) [GET]
+  [4;36;1mDoctor Load (0.3ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered doctors/_list (3.8ms)
+Rendered doctors/_list (1.0ms)
+Rendered layouts/_header (1.3ms)
+Rendered layouts/_footer (1.3ms)
+Completed in 33ms (View: 27, DB: 81) | 200 OK [http://www.example.com/doctors]
+  [4;35;1mSQL (93.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 10:10:57) [GET]
+  [4;35;1mDoctor Load (0.3ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 93) | 200 OK [http://www.example.com/doctors]
+REQUESTING PAGE: GET /doctors/new with {} and HTTP headers {"HTTP_REFERER"=>"/doctors"}
+
+
+Processing DoctorsController#new (for 127.0.0.1 at 2010-09-13 10:10:57) [GET]
+Rendering template within layouts/application
+Rendering doctors/new
+Rendered doctors/_new (8.5ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://www.example.com/doctors/new]
+REQUESTING PAGE: POST /doctors with {"doctor"=>{"address"=>"Kathmandu,Nepal", "phone"=>"", "full_name"=>"Bishu", "email"=>""}, "commit"=>"Create New"} and HTTP headers {"HTTP_REFERER"=>"/doctors/new"}
+
+
+Processing DoctorsController#create (for 127.0.0.1 at 2010-09-13 10:10:57) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu,Nepal", "full_name"=>"Bishu", "phone"=>"", "email"=>""}, "commit"=>"Create New"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.3ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishu') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.3ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Kathmandu,Nepal', '2010-09-13 04:25:57', '2010-09-13 04:25:57', NULL, 'Bishu', '', '')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/doctors/3
+Completed in 14ms (DB: 0) | 302 Found [http://www.example.com/doctors]
+REQUESTING PAGE: GET http://www.example.com/doctors/3 with {} and HTTP headers {"HTTP_REFERER"=>"/doctors"}
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2010-09-13 10:10:57) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mDoctor Load (8.7ms)[0m   [0;1mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering doctors/show
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 93ms (View: 9, DB: 9) | 200 OK [http://www.example.com/doctors/3]
+  [4;35;1mSQL (34.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 10:10:57) [GET]
+  [4;35;1mDoctor Load (0.3ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 5ms (View: 3, DB: 35) | 200 OK [http://www.example.com/doctors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (59.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (17.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (86.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (18.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDepartment Columns (0.0ms)[0m   [0mMysql::Error: Table 'HProject2_test.departments' doesn't exist: SHOW FIELDS FROM `departments`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDepartment Columns (0.0ms)[0m   [0mMysql::Error: Table 'HProject2_test.departments' doesn't exist: SHOW FIELDS FROM `departments`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDepartment Columns (0.0ms)[0m   [0mMysql::Error: Table 'HProject2_test.departments' doesn't exist: SHOW FIELDS FROM `departments`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDepartment Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `departments`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDepartment Create (0.2ms)[0m   [0mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('Pharmacy', NULL, '2010-09-13 07:31:09', '2010-09-13 07:31:09', NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDepartment Create (0.2ms)[0m   [0;1mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('OPD', NULL, '2010-09-13 07:31:09', '2010-09-13 07:31:09', NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (70.7ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDepartment Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `departments`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDepartment Create (0.2ms)[0m   [0mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('Pharmacy', NULL, '2010-09-13 07:34:04', '2010-09-13 07:34:04', NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDepartment Create (0.1ms)[0m   [0;1mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('OPD', NULL, '2010-09-13 07:34:04', '2010-09-13 07:34:04', NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (54.2ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDepartment Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `departments`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDepartment Create (0.2ms)[0m   [0mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('Pharmacy', NULL, '2010-09-13 07:38:00', '2010-09-13 07:38:00', NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDepartment Create (0.1ms)[0m   [0;1mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('OPD', NULL, '2010-09-13 07:38:00', '2010-09-13 07:38:00', NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /departments with {} and HTTP headers {}
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-13 13:23:00) [GET]
+  [4;36;1mSQL (70.5ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDepartment Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `departments`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDepartment Create (0.2ms)[0m   [0mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('Pharmacy', NULL, '2010-09-13 07:43:04', '2010-09-13 07:43:04', NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDepartment Create (0.1ms)[0m   [0;1mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('OPD', NULL, '2010-09-13 07:43:04', '2010-09-13 07:43:04', NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /departments with {} and HTTP headers {}
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-13 13:28:04) [GET]
+  [4;36;1mSQL (74.9ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDepartment Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `departments`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDepartment Create (0.2ms)[0m   [0mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('Pharmacy', NULL, '2010-09-13 07:44:50', '2010-09-13 07:44:50', NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDepartment Create (0.1ms)[0m   [0;1mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('OPD', NULL, '2010-09-13 07:44:50', '2010-09-13 07:44:50', NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /departments with {} and HTTP headers {}
+
+
+Processing DepartmentsController#index (for 127.0.0.1 at 2010-09-13 13:29:50) [GET]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-13 13:29:50) [GET]
+  [4;36;1mSQL (47.6ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDepartment Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `departments`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDepartment Create (0.2ms)[0m   [0mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('Pharmacy', NULL, '2010-09-13 07:48:25', '2010-09-13 07:48:25', NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDepartment Create (0.2ms)[0m   [0;1mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('OPD', NULL, '2010-09-13 07:48:25', '2010-09-13 07:48:25', NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /departments with {} and HTTP headers {}
+
+
+Processing DepartmentsController#index (for 127.0.0.1 at 2010-09-13 13:33:25) [GET]
+  [4;36;1mDepartment Load (0.3ms)[0m   [0;1mSELECT * FROM `departments` [0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-13 13:33:25) [GET]
+  [4;35;1mSQL (43.7ms)[0m   [0mROLLBACK[0m
