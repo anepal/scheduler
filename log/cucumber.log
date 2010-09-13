@@ -376,3 +376,1009 @@ Rendered doctors/_list (2.1ms)
 Rendered doctors/_list (0.5ms)
 Completed in 13ms (View: 8, DB: 3) | 200 OK [http://www.example.com/doctors]
   [4;35;1mSQL (58.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Columns (0.0ms)[0m   [0mMysql::Error: Table 'HProject2_test.doctors' doesn't exist: SHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 17:22:58) [GET]
+  [4;36;1mDoctor Load (0.0ms)[0m   [0;1mMysql::Error: Table 'HProject2_test.doctors' doesn't exist: SELECT * FROM `doctors` [0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-12 17:22:58) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 17:22:59) [GET]
+  [4;35;1mDoctor Load (0.0ms)[0m   [0mMysql::Error: Table 'HProject2_test.doctors' doesn't exist: SELECT * FROM `doctors` [0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-12 17:22:59) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.2ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-12 11:46:11', '2010-09-12 11:46:11', NULL, 'Ram', NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (14.4ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram' AND `doctors`.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.1ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-12 11:46:11', '2010-09-12 11:46:11', NULL, 'Shyam', NULL, NULL)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam' AND `doctors`.id <> 2) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 17:31:11) [GET]
+  [4;36;1mDoctor Load (0.3ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered doctors/_list (3.0ms)
+Rendered doctors/_list (0.7ms)
+Completed in 32ms (View: 27, DB: 17) | 200 OK [http://www.example.com/doctors]
+  [4;35;1mSQL (14.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 17:31:11) [GET]
+  [4;35;1mDoctor Load (0.3ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 3ms (View: 1, DB: 15) | 200 OK [http://www.example.com/doctors]
+REQUESTING PAGE: GET /doctors/new with {} and HTTP headers {"HTTP_REFERER"=>"/doctors"}
+
+
+Processing DoctorsController#new (for 127.0.0.1 at 2010-09-12 17:31:11) [GET]
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-09-12 17:31:11) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 17:31:11) [GET]
+  [4;36;1mDoctor Load (0.1ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://www.example.com/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.2ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-12 12:19:38', '2010-09-12 12:19:38', NULL, 'Ram', NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram' AND `doctors`.id <> 3) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.1ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-12 12:19:38', '2010-09-12 12:19:38', NULL, 'Shyam', NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam' AND `doctors`.id <> 4) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 18:04:38) [GET]
+  [4;36;1mDoctor Load (0.3ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered doctors/_list (2.1ms)
+Rendered doctors/_list (0.6ms)
+Completed in 12ms (View: 8, DB: 3) | 200 OK [http://www.example.com/doctors]
+  [4;35;1mSQL (48.5ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 18:04:38) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 2ms (View: 1, DB: 49) | 200 OK [http://www.example.com/doctors]
+REQUESTING PAGE: GET /doctors/new with {} and HTTP headers {"HTTP_REFERER"=>"/doctors"}
+
+
+Processing DoctorsController#new (for 127.0.0.1 at 2010-09-12 18:04:38) [GET]
+Rendering template within layouts/application
+Rendering doctors/new
+Rendered doctors/_new (5.3ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://www.example.com/doctors/new]
+REQUESTING PAGE: POST /doctors with {"doctor"=>{"address"=>"Kathmandu,Nepal", "phone"=>"", "full_name"=>"Bishu", "email"=>""}, "commit"=>"Create New"} and HTTP headers {"HTTP_REFERER"=>"/doctors/new"}
+
+
+Processing DoctorsController#create (for 127.0.0.1 at 2010-09-12 18:04:38) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu,Nepal", "full_name"=>"Bishu", "phone"=>"", "email"=>""}, "commit"=>"Create New"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.3ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishu') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.2ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Kathmandu,Nepal', '2010-09-12 12:19:38', '2010-09-12 12:19:38', NULL, 'Bishu', '', '')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/doctors/5
+Completed in 37ms (DB: 0) | 302 Found [http://www.example.com/doctors]
+REQUESTING PAGE: GET http://www.example.com/doctors/5 with {} and HTTP headers {"HTTP_REFERER"=>"/doctors"}
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2010-09-12 18:04:38) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mDoctor Load (0.4ms)[0m   [0;1mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 5) [0m
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2010-09-12 18:04:38) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mSQL (27.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 18:04:38) [GET]
+  [4;35;1mDoctor Load (0.3ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 3ms (View: 1, DB: 28) | 200 OK [http://www.example.com/doctors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.2ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-12 12:20:30', '2010-09-12 12:20:30', NULL, 'Ram', NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram' AND `doctors`.id <> 6) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.1ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.1ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-12 12:20:30', '2010-09-12 12:20:30', NULL, 'Shyam', NULL, NULL)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam' AND `doctors`.id <> 7) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 18:05:31) [GET]
+  [4;36;1mDoctor Load (0.2ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered doctors/_list (2.1ms)
+Rendered doctors/_list (0.5ms)
+Completed in 12ms (View: 8, DB: 3) | 200 OK [http://www.example.com/doctors]
+  [4;35;1mSQL (3.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 18:05:31) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 2ms (View: 1, DB: 4) | 200 OK [http://www.example.com/doctors]
+REQUESTING PAGE: GET /doctors/new with {} and HTTP headers {"HTTP_REFERER"=>"/doctors"}
+
+
+Processing DoctorsController#new (for 127.0.0.1 at 2010-09-12 18:05:31) [GET]
+Rendering template within layouts/application
+Rendering doctors/new
+Rendered doctors/_new (6.7ms)
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://www.example.com/doctors/new]
+REQUESTING PAGE: POST /doctors with {"doctor"=>{"address"=>"Kathmandu,Nepal", "phone"=>"", "full_name"=>"Bishu", "email"=>""}, "commit"=>"Create New"} and HTTP headers {"HTTP_REFERER"=>"/doctors/new"}
+
+
+Processing DoctorsController#create (for 127.0.0.1 at 2010-09-12 18:05:31) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu,Nepal", "full_name"=>"Bishu", "phone"=>"", "email"=>""}, "commit"=>"Create New"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishu') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.2ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Kathmandu,Nepal', '2010-09-12 12:20:31', '2010-09-12 12:20:31', NULL, 'Bishu', '', '')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/doctors/8
+Completed in 8ms (DB: 0) | 302 Found [http://www.example.com/doctors]
+REQUESTING PAGE: GET http://www.example.com/doctors/8 with {} and HTTP headers {"HTTP_REFERER"=>"/doctors"}
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2010-09-12 18:05:31) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mDoctor Load (0.2ms)[0m   [0;1mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 8) [0m
+Rendering template within layouts/application
+Rendering doctors/show
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://www.example.com/doctors/8]
+  [4;35;1mSQL (0.5ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 18:05:31) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://www.example.com/doctors]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.3ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.3ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-12 12:24:01', '2010-09-12 12:24:01', NULL, 'Ram', NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram' AND `doctors`.id <> 9) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.1ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.1ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-12 12:24:01', '2010-09-12 12:24:01', NULL, 'Shyam', NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam' AND `doctors`.id <> 10) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 18:09:01) [GET]
+  [4;36;1mDoctor Load (0.2ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered doctors/_list (2.4ms)
+Rendered doctors/_list (0.6ms)
+Completed in 15ms (View: 10, DB: 3) | 200 OK [http://www.example.com/doctors]
+  [4;35;1mSQL (17.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 18:09:01) [GET]
+  [4;35;1mDoctor Load (2.7ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 5ms (View: 1, DB: 20) | 200 OK [http://www.example.com/doctors]
+REQUESTING PAGE: GET /doctors/new with {} and HTTP headers {"HTTP_REFERER"=>"/doctors"}
+
+
+Processing DoctorsController#new (for 127.0.0.1 at 2010-09-12 18:09:01) [GET]
+Rendering template within layouts/application
+Rendering doctors/new
+Rendered doctors/_new (5.5ms)
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://www.example.com/doctors/new]
+REQUESTING PAGE: POST /doctors with {"doctor"=>{"address"=>"Kathmandu,Nepal", "phone"=>"", "full_name"=>"Bishu", "email"=>""}, "commit"=>"Create New"} and HTTP headers {"HTTP_REFERER"=>"/doctors/new"}
+
+
+Processing DoctorsController#create (for 127.0.0.1 at 2010-09-12 18:09:01) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu,Nepal", "full_name"=>"Bishu", "phone"=>"", "email"=>""}, "commit"=>"Create New"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishu') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.2ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Kathmandu,Nepal', '2010-09-12 12:24:01', '2010-09-12 12:24:01', NULL, 'Bishu', '', '')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/doctors/11
+Completed in 11ms (DB: 0) | 302 Found [http://www.example.com/doctors]
+REQUESTING PAGE: GET http://www.example.com/doctors/11 with {} and HTTP headers {"HTTP_REFERER"=>"/doctors"}
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2010-09-12 18:09:01) [GET]
+  Parameters: {"id"=>"11"}
+  [4;36;1mDoctor Load (0.3ms)[0m   [0;1mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 11) [0m
+Rendering template within layouts/application
+Rendering doctors/show
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://www.example.com/doctors/11]
+  [4;35;1mSQL (0.5ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 18:09:01) [GET]
+  [4;35;1mDoctor Load (0.4ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://www.example.com/doctors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.2ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-12 12:24:55', '2010-09-12 12:24:55', NULL, 'Ram', NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram' AND `doctors`.id <> 12) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.1ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.1ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-12 12:24:55', '2010-09-12 12:24:55', NULL, 'Shyam', NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam' AND `doctors`.id <> 13) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 18:09:55) [GET]
+  [4;36;1mDoctor Load (0.3ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered doctors/_list (2.5ms)
+Rendered doctors/_list (0.5ms)
+Completed in 13ms (View: 9, DB: 3) | 200 OK [http://www.example.com/doctors]
+  [4;35;1mSQL (6.9ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 18:09:55) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 2ms (View: 1, DB: 7) | 200 OK [http://www.example.com/doctors]
+REQUESTING PAGE: GET /doctors/new with {} and HTTP headers {"HTTP_REFERER"=>"/doctors"}
+
+
+Processing DoctorsController#new (for 127.0.0.1 at 2010-09-12 18:09:55) [GET]
+Rendering template within layouts/application
+Rendering doctors/new
+Rendered doctors/_new (5.2ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://www.example.com/doctors/new]
+REQUESTING PAGE: POST /doctors with {"doctor"=>{"address"=>"Kathmandu,Nepal", "phone"=>"", "full_name"=>"Bishu", "email"=>""}, "commit"=>"Create New"} and HTTP headers {"HTTP_REFERER"=>"/doctors/new"}
+
+
+Processing DoctorsController#create (for 127.0.0.1 at 2010-09-12 18:09:55) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu,Nepal", "full_name"=>"Bishu", "phone"=>"", "email"=>""}, "commit"=>"Create New"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishu') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.2ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Kathmandu,Nepal', '2010-09-12 12:24:55', '2010-09-12 12:24:55', NULL, 'Bishu', '', '')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/doctors/14
+Completed in 9ms (DB: 0) | 302 Found [http://www.example.com/doctors]
+REQUESTING PAGE: GET http://www.example.com/doctors/14 with {} and HTTP headers {"HTTP_REFERER"=>"/doctors"}
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2010-09-12 18:09:55) [GET]
+  Parameters: {"id"=>"14"}
+  [4;36;1mDoctor Load (0.3ms)[0m   [0;1mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 14) [0m
+Rendering template within layouts/application
+Rendering doctors/show
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://www.example.com/doctors/14]
+  [4;35;1mSQL (0.5ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 18:09:55) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://www.example.com/doctors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram') LIMIT 1[0m
+  [4;36;1mDoctor Create (23.2ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-12 12:25:50', '2010-09-12 12:25:50', NULL, 'Ram', NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.3ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram' AND `doctors`.id <> 15) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.1ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.1ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-12 12:25:50', '2010-09-12 12:25:50', NULL, 'Shyam', NULL, NULL)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam' AND `doctors`.id <> 16) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 18:10:50) [GET]
+  [4;36;1mDoctor Load (0.2ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered doctors/_list (2.2ms)
+Rendered doctors/_list (0.5ms)
+Completed in 13ms (View: 9, DB: 26) | 200 OK [http://www.example.com/doctors]
+  [4;35;1mSQL (12.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 18:10:50) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 2ms (View: 1, DB: 13) | 200 OK [http://www.example.com/doctors]
+REQUESTING PAGE: GET /doctors/new with {} and HTTP headers {"HTTP_REFERER"=>"/doctors"}
+
+
+Processing DoctorsController#new (for 127.0.0.1 at 2010-09-12 18:10:50) [GET]
+Rendering template within layouts/application
+Rendering doctors/new
+Rendered doctors/_new (5.1ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://www.example.com/doctors/new]
+REQUESTING PAGE: POST /doctors with {"doctor"=>{"address"=>"Kathmandu,Nepal", "phone"=>"", "full_name"=>"Bishu", "email"=>""}, "commit"=>"Create New"} and HTTP headers {"HTTP_REFERER"=>"/doctors/new"}
+
+
+Processing DoctorsController#create (for 127.0.0.1 at 2010-09-12 18:10:50) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu,Nepal", "full_name"=>"Bishu", "phone"=>"", "email"=>""}, "commit"=>"Create New"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishu') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.2ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Kathmandu,Nepal', '2010-09-12 12:25:50', '2010-09-12 12:25:50', NULL, 'Bishu', '', '')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/doctors/17
+Completed in 9ms (DB: 0) | 302 Found [http://www.example.com/doctors]
+REQUESTING PAGE: GET http://www.example.com/doctors/17 with {} and HTTP headers {"HTTP_REFERER"=>"/doctors"}
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2010-09-12 18:10:50) [GET]
+  Parameters: {"id"=>"17"}
+  [4;36;1mDoctor Load (0.3ms)[0m   [0;1mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 17) [0m
+Rendering template within layouts/application
+Rendering doctors/show
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://www.example.com/doctors/17]
+  [4;35;1mSQL (0.5ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 18:10:50) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://www.example.com/doctors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (9.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.3ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.4ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-12 12:39:41', '2010-09-12 12:39:41', NULL, 'Ram', NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.4ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram' AND `doctors`.id <> 18) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.3ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-12 12:39:41', '2010-09-12 12:39:41', NULL, 'Shyam', NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.3ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam' AND `doctors`.id <> 19) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 18:24:41) [GET]
+  [4;36;1mDoctor Load (0.3ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered doctors/_list (3.7ms)
+Rendered doctors/_list (1.0ms)
+Completed in 21ms (View: 15, DB: 15) | 200 OK [http://www.example.com/doctors]
+  [4;35;1mSQL (48.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 18:24:41) [GET]
+  [4;35;1mDoctor Load (0.3ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 3ms (View: 1, DB: 48) | 200 OK [http://www.example.com/doctors]
+REQUESTING PAGE: GET /doctors/new with {} and HTTP headers {"HTTP_REFERER"=>"/doctors"}
+
+
+Processing DoctorsController#new (for 127.0.0.1 at 2010-09-12 18:24:41) [GET]
+Rendering template within layouts/application
+Rendering doctors/new
+Rendered doctors/_new (9.3ms)
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://www.example.com/doctors/new]
+REQUESTING PAGE: POST /doctors with {"doctor"=>{"address"=>"Kathmandu,Nepal", "phone"=>"", "full_name"=>"Bishu", "email"=>""}, "commit"=>"Create New"} and HTTP headers {"HTTP_REFERER"=>"/doctors/new"}
+
+
+Processing DoctorsController#create (for 127.0.0.1 at 2010-09-12 18:24:41) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu,Nepal", "full_name"=>"Bishu", "phone"=>"", "email"=>""}, "commit"=>"Create New"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.6ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishu') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.2ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Kathmandu,Nepal', '2010-09-12 12:39:41', '2010-09-12 12:39:41', NULL, 'Bishu', '', '')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/doctors/20
+Completed in 31ms (DB: 0) | 302 Found [http://www.example.com/doctors]
+REQUESTING PAGE: GET http://www.example.com/doctors/20 with {} and HTTP headers {"HTTP_REFERER"=>"/doctors"}
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2010-09-12 18:24:41) [GET]
+  Parameters: {"id"=>"20"}
+  [4;36;1mDoctor Load (0.4ms)[0m   [0;1mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 20) [0m
+Rendering template within layouts/application
+Rendering doctors/show
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://www.example.com/doctors/20]
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 18:24:41) [GET]
+  [4;35;1mDoctor Load (0.3ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 3ms (View: 1, DB: 1) | 200 OK [http://www.example.com/doctors]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (33.4ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.4ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-12 12:59:05', '2010-09-12 12:59:05', NULL, 'Ram', NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.4ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram' AND `doctors`.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.2ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-12 12:59:05', '2010-09-12 12:59:05', NULL, 'Shyam', NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.3ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam' AND `doctors`.id <> 2) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 18:44:05) [GET]
+  [4;36;1mDoctor Load (0.3ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered doctors/_list (3.6ms)
+Rendered doctors/_list (0.9ms)
+Completed in 29ms (View: 23, DB: 38) | 200 OK [http://www.example.com/doctors]
+  [4;35;1mSQL (4.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 18:44:05) [GET]
+  [4;35;1mDoctor Load (0.3ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 3ms (View: 1, DB: 4) | 200 OK [http://www.example.com/doctors]
+REQUESTING PAGE: GET /doctors/new with {} and HTTP headers {"HTTP_REFERER"=>"/doctors"}
+
+
+Processing DoctorsController#new (for 127.0.0.1 at 2010-09-12 18:44:05) [GET]
+Rendering template within layouts/application
+Rendering doctors/new
+Rendered doctors/_new (8.2ms)
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://www.example.com/doctors/new]
+REQUESTING PAGE: POST /doctors with {"doctor"=>{"address"=>"Kathmandu,Nepal", "phone"=>"", "full_name"=>"Bishu", "email"=>""}, "commit"=>"Create New"} and HTTP headers {"HTTP_REFERER"=>"/doctors/new"}
+
+
+Processing DoctorsController#create (for 127.0.0.1 at 2010-09-12 18:44:05) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu,Nepal", "full_name"=>"Bishu", "phone"=>"", "email"=>""}, "commit"=>"Create New"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.3ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishu') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.2ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Kathmandu,Nepal', '2010-09-12 12:59:05', '2010-09-12 12:59:05', NULL, 'Bishu', '', '')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/doctors/3
+Completed in 28ms (DB: 0) | 302 Found [http://www.example.com/doctors]
+REQUESTING PAGE: GET http://www.example.com/doctors/3 with {} and HTTP headers {"HTTP_REFERER"=>"/doctors"}
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2010-09-12 18:44:05) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mDoctor Load (0.3ms)[0m   [0;1mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering doctors/show
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://www.example.com/doctors/3]
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 18:44:05) [GET]
+  [4;35;1mDoctor Load (0.3ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 3ms (View: 1, DB: 1) | 200 OK [http://www.example.com/doctors]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.2ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-12 12:59:38', '2010-09-12 12:59:38', NULL, 'Ram', NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram' AND `doctors`.id <> 4) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.1ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.1ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-12 12:59:38', '2010-09-12 12:59:38', NULL, 'Shyam', NULL, NULL)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam' AND `doctors`.id <> 5) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 18:44:38) [GET]
+  [4;36;1mDoctor Load (0.2ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered doctors/_list (2.5ms)
+Rendered doctors/_list (0.5ms)
+Completed in 12ms (View: 8, DB: 3) | 200 OK [http://www.example.com/doctors]
+  [4;35;1mSQL (5.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 18:44:38) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 2ms (View: 1, DB: 6) | 200 OK [http://www.example.com/doctors]
+REQUESTING PAGE: GET /doctors/new with {} and HTTP headers {"HTTP_REFERER"=>"/doctors"}
+
+
+Processing DoctorsController#new (for 127.0.0.1 at 2010-09-12 18:44:38) [GET]
+Rendering template within layouts/application
+Rendering doctors/new
+Rendered doctors/_new (6.3ms)
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://www.example.com/doctors/new]
+REQUESTING PAGE: POST /doctors with {"doctor"=>{"address"=>"Kathmandu,Nepal", "phone"=>"", "full_name"=>"Bishu", "email"=>""}, "commit"=>"Create New"} and HTTP headers {"HTTP_REFERER"=>"/doctors/new"}
+
+
+Processing DoctorsController#create (for 127.0.0.1 at 2010-09-12 18:44:38) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu,Nepal", "full_name"=>"Bishu", "phone"=>"", "email"=>""}, "commit"=>"Create New"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishu') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.1ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Kathmandu,Nepal', '2010-09-12 12:59:38', '2010-09-12 12:59:38', NULL, 'Bishu', '', '')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/doctors/6
+Completed in 8ms (DB: 0) | 302 Found [http://www.example.com/doctors]
+REQUESTING PAGE: GET http://www.example.com/doctors/6 with {} and HTTP headers {"HTTP_REFERER"=>"/doctors"}
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2010-09-12 18:44:38) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mDoctor Load (0.3ms)[0m   [0;1mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering doctors/show
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://www.example.com/doctors/6]
+  [4;35;1mSQL (0.5ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 18:44:38) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://www.example.com/doctors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.2ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-12 13:16:26', '2010-09-12 13:16:26', NULL, 'Ram', NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram' AND `doctors`.id <> 7) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.1ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.1ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-12 13:16:26', '2010-09-12 13:16:26', NULL, 'Shyam', NULL, NULL)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam' AND `doctors`.id <> 8) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 19:01:26) [GET]
+  [4;36;1mDoctor Load (0.2ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered doctors/_list (2.1ms)
+Rendered doctors/_list (0.6ms)
+Completed in 12ms (View: 8, DB: 3) | 200 OK [http://www.example.com/doctors]
+  [4;35;1mSQL (7.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 19:01:26) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 2ms (View: 1, DB: 8) | 200 OK [http://www.example.com/doctors]
+REQUESTING PAGE: GET /doctors/new with {} and HTTP headers {"HTTP_REFERER"=>"/doctors"}
+
+
+Processing DoctorsController#new (for 127.0.0.1 at 2010-09-12 19:01:27) [GET]
+Rendering template within layouts/application
+Rendering doctors/new
+Rendered doctors/_new (5.0ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://www.example.com/doctors/new]
+REQUESTING PAGE: POST /doctors with {"doctor"=>{"address"=>"Kathmandu,Nepal", "phone"=>"", "full_name"=>"Bishu", "email"=>""}, "commit"=>"Create New"} and HTTP headers {"HTTP_REFERER"=>"/doctors/new"}
+
+
+Processing DoctorsController#create (for 127.0.0.1 at 2010-09-12 19:01:27) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu,Nepal", "full_name"=>"Bishu", "phone"=>"", "email"=>""}, "commit"=>"Create New"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishu') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.1ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Kathmandu,Nepal', '2010-09-12 13:16:27', '2010-09-12 13:16:27', NULL, 'Bishu', '', '')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/doctors/9
+Completed in 8ms (DB: 0) | 302 Found [http://www.example.com/doctors]
+REQUESTING PAGE: GET http://www.example.com/doctors/9 with {} and HTTP headers {"HTTP_REFERER"=>"/doctors"}
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2010-09-12 19:01:27) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mDoctor Load (0.2ms)[0m   [0;1mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 9) [0m
+Rendering template within layouts/application
+Rendering doctors/show
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://www.example.com/doctors/9]
+  [4;35;1mSQL (1.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 19:01:27) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 2ms (View: 1, DB: 2) | 200 OK [http://www.example.com/doctors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.3ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-12 13:18:20', '2010-09-12 13:18:20', NULL, 'Ram', NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram' AND `doctors`.id <> 10) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.1ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.1ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-12 13:18:20', '2010-09-12 13:18:20', NULL, 'Shyam', NULL, NULL)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam' AND `doctors`.id <> 11) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 19:03:20) [GET]
+  [4;36;1mDoctor Load (0.2ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered doctors/_list (2.2ms)
+Rendered doctors/_list (0.5ms)
+Completed in 12ms (View: 8, DB: 3) | 200 OK [http://www.example.com/doctors]
+  [4;35;1mSQL (5.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 19:03:20) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 2ms (View: 1, DB: 6) | 200 OK [http://www.example.com/doctors]
+REQUESTING PAGE: GET /doctors/new with {} and HTTP headers {"HTTP_REFERER"=>"/doctors"}
+
+
+Processing DoctorsController#new (for 127.0.0.1 at 2010-09-12 19:03:20) [GET]
+Rendering template within layouts/application
+Rendering doctors/new
+Rendered doctors/_new (6.7ms)
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://www.example.com/doctors/new]
+REQUESTING PAGE: POST /doctors with {"doctor"=>{"address"=>"Kathmandu,Nepal", "phone"=>"", "full_name"=>"Bishu", "email"=>""}, "commit"=>"Create New"} and HTTP headers {"HTTP_REFERER"=>"/doctors/new"}
+
+
+Processing DoctorsController#create (for 127.0.0.1 at 2010-09-12 19:03:20) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu,Nepal", "full_name"=>"Bishu", "phone"=>"", "email"=>""}, "commit"=>"Create New"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishu') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.1ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Kathmandu,Nepal', '2010-09-12 13:18:20', '2010-09-12 13:18:20', NULL, 'Bishu', '', '')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/doctors/12
+Completed in 8ms (DB: 0) | 302 Found [http://www.example.com/doctors]
+REQUESTING PAGE: GET http://www.example.com/doctors/12 with {} and HTTP headers {"HTTP_REFERER"=>"/doctors"}
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2010-09-12 19:03:21) [GET]
+  Parameters: {"id"=>"12"}
+  [4;36;1mDoctor Load (0.3ms)[0m   [0;1mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 12) [0m
+Rendering template within layouts/application
+Rendering doctors/show
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://www.example.com/doctors/12]
+  [4;35;1mSQL (1.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 19:03:21) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 2ms (View: 1, DB: 2) | 200 OK [http://www.example.com/doctors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.3ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.2ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-12 13:46:43', '2010-09-12 13:46:43', NULL, 'Ram', NULL, NULL)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram' AND `doctors`.id <> 13) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.1ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.1ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-12 13:46:43', '2010-09-12 13:46:43', NULL, 'Shyam', NULL, NULL)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam' AND `doctors`.id <> 14) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 19:31:43) [GET]
+  [4;36;1mDoctor Load (0.3ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered doctors/_list (2.2ms)
+Rendered doctors/_list (0.5ms)
+Completed in 14ms (View: 9, DB: 3) | 200 OK [http://www.example.com/doctors]
+  [4;35;1mSQL (8.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 19:31:43) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 2ms (View: 1, DB: 9) | 200 OK [http://www.example.com/doctors]
+REQUESTING PAGE: GET /doctors/new with {} and HTTP headers {"HTTP_REFERER"=>"/doctors"}
+
+
+Processing DoctorsController#new (for 127.0.0.1 at 2010-09-12 19:31:43) [GET]
+Rendering template within layouts/application
+Rendering doctors/new
+Rendered doctors/_new (5.3ms)
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://www.example.com/doctors/new]
+REQUESTING PAGE: POST /doctors with {"doctor"=>{"address"=>"Kathmandu,Nepal", "phone"=>"", "full_name"=>"Bishu", "email"=>""}, "commit"=>"Create New"} and HTTP headers {"HTTP_REFERER"=>"/doctors/new"}
+
+
+Processing DoctorsController#create (for 127.0.0.1 at 2010-09-12 19:31:43) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu,Nepal", "full_name"=>"Bishu", "phone"=>"", "email"=>""}, "commit"=>"Create New"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishu') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.1ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Kathmandu,Nepal', '2010-09-12 13:46:43', '2010-09-12 13:46:43', NULL, 'Bishu', '', '')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/doctors/15
+Completed in 8ms (DB: 0) | 302 Found [http://www.example.com/doctors]
+REQUESTING PAGE: GET http://www.example.com/doctors/15 with {} and HTTP headers {"HTTP_REFERER"=>"/doctors"}
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2010-09-12 19:31:44) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mDoctor Load (0.3ms)[0m   [0;1mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 15) [0m
+Rendering template within layouts/application
+Rendering doctors/show
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://www.example.com/doctors/15]
+  [4;35;1mSQL (1.8ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 19:31:44) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 2ms (View: 1, DB: 2) | 200 OK [http://www.example.com/doctors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.2ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-12 13:51:18', '2010-09-12 13:51:18', NULL, 'Ram', NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram' AND `doctors`.id <> 16) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.1ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.1ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES(NULL, '2010-09-12 13:51:18', '2010-09-12 13:51:18', NULL, 'Shyam', NULL, NULL)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Shyam' AND `doctors`.id <> 17) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 19:36:18) [GET]
+  [4;36;1mDoctor Load (0.2ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered doctors/_list (2.1ms)
+Rendered doctors/_list (0.5ms)
+Completed in 12ms (View: 8, DB: 3) | 200 OK [http://www.example.com/doctors]
+  [4;35;1mSQL (6.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 19:36:18) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 2ms (View: 1, DB: 6) | 200 OK [http://www.example.com/doctors]
+REQUESTING PAGE: GET /doctors/new with {} and HTTP headers {"HTTP_REFERER"=>"/doctors"}
+
+
+Processing DoctorsController#new (for 127.0.0.1 at 2010-09-12 19:36:18) [GET]
+Rendering template within layouts/application
+Rendering doctors/new
+Rendered doctors/_new (6.7ms)
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://www.example.com/doctors/new]
+REQUESTING PAGE: POST /doctors with {"doctor"=>{"address"=>"Kathmandu,Nepal", "phone"=>"", "full_name"=>"Bishu", "email"=>""}, "commit"=>"Create New"} and HTTP headers {"HTTP_REFERER"=>"/doctors/new"}
+
+
+Processing DoctorsController#create (for 127.0.0.1 at 2010-09-12 19:36:18) [POST]
+  Parameters: {"doctor"=>{"address"=>"Kathmandu,Nepal", "full_name"=>"Bishu", "phone"=>"", "email"=>""}, "commit"=>"Create New"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishu') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.1ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Kathmandu,Nepal', '2010-09-12 13:51:18', '2010-09-12 13:51:18', NULL, 'Bishu', '', '')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/doctors/18
+Completed in 8ms (DB: 0) | 302 Found [http://www.example.com/doctors]
+REQUESTING PAGE: GET http://www.example.com/doctors/18 with {} and HTTP headers {"HTTP_REFERER"=>"/doctors"}
+
+
+Processing DoctorsController#show (for 127.0.0.1 at 2010-09-12 19:36:18) [GET]
+  Parameters: {"id"=>"18"}
+  [4;36;1mDoctor Load (0.3ms)[0m   [0;1mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 18) [0m
+Rendering template within layouts/application
+Rendering doctors/show
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://www.example.com/doctors/18]
+  [4;35;1mSQL (0.5ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /doctors with {} and HTTP headers {}
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-12 19:36:18) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://www.example.com/doctors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m

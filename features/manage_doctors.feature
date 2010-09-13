@@ -7,8 +7,22 @@ Scenario: Doctors List
     When I go to the list of doctors
     Then I should see "Ram"
     And I should see "Shyam"
+    
+Scenario: Create Doctor
+    Given I am on the list of doctors
+    When I follow "Create New"
+    Then I fill in "Full Name" with "Bishu"
+    Then I fill in "Address" with "Kathmandu,Nepal"
+    When I press "Create New"
+    Then I should see "Bishu successfully created"
+    And I should see "Bishu"
+    And I should see "Kathmandu,Nepal"
+   
 
-Scenario: Delete Doctor
-    Given I have list of doctors named Ram,Shyam
-    When I click on delete "Ram" 
-    Then I should not see "Ram"
+Scenario: Edit Doctor
+    Given I am on the list of doctors
+    When I follow "Edit"
+    Then I fill in "Address" with "Kathmandu,Nepal"
+    When I press "Update"
+    Then I should see "Doctor successfully updated"
+    And I should be on the list of doctors
