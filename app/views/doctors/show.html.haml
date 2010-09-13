@@ -1,5 +1,8 @@
 .maincont
   %h3= 'Show doctor'
+  %div
+    =flash[:notice]
+
   %p
     = label_tag "Full name:"
     = @doctor.full_name

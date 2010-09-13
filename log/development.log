@@ -976,3 +976,117 @@ Migrating to CreateDepartments (20100913072117)
   [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
   [4;35;1mSQL (0.6ms)[0m   [0mdescribe `doctors`[0m
   [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DepartmentsController#index (for 127.0.0.1 at 2010-09-13 14:31:37) [GET]
+  [4;36;1mDepartment Load (0.3ms)[0m   [0;1mSELECT * FROM `departments` [0m
+Rendering template within layouts/application
+Rendering departments/index
+
+ActionView::TemplateError (Inconsistent indentation: 5 spaces were used for indentation, but the rest of the document was indented using 4 spaces.) on line #13 of app/views/departments/index.html.haml:
+10:                 %th
+11:                     =""
+12:             = render :partial => "list", :collection => @departments
+13:      - else
+14:         = "The departments list is empty"
+15:     = link_to "Create New", new_department_path
+16:    
+
+    app/views/departments/index.html.haml:13
+    haml (3.0.18) lib/haml/precompiler.rb:152:in `tabs'
+    haml (3.0.18) lib/haml/precompiler.rb:134:in `instance_eval'
+    haml (3.0.18) lib/haml/precompiler.rb:134:in `tabs'
+    haml (3.0.18) lib/haml/precompiler.rb:1041:in `block_opened?'
+    haml (3.0.18) lib/haml/precompiler.rb:387:in `push_script'
+    haml (3.0.18) lib/haml/precompiler.rb:224:in `process_line'
+    haml (3.0.18) lib/haml/precompiler.rb:178:in `precompile'
+    haml (3.0.18) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (120.9ms)
+Rendered rescues/_request_and_response (18.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DepartmentsController#index (for 127.0.0.1 at 2010-09-13 14:36:06) [GET]
+  [4;35;1mDepartment Load (0.2ms)[0m   [0mSELECT * FROM `departments` [0m
+Rendering template within layouts/application
+Rendering departments/index
+
+ActionView::TemplateError (Inconsistent indentation: 13 spaces were used for indentation, but the rest of the document was indented using 4 spaces.) on line #12 of app/views/departments/index.html.haml:
+9:                     ="Name"
+10:                 %th
+11:                     =""
+12:              = render :partial => "list", :collection => @departments
+13:      - else
+14:         = "The departments list is empty"
+15:     = link_to "Create New", new_department_path
+
+    app/views/departments/index.html.haml:12
+    haml (3.0.18) lib/haml/precompiler.rb:152:in `tabs'
+    haml (3.0.18) lib/haml/precompiler.rb:134:in `instance_eval'
+    haml (3.0.18) lib/haml/precompiler.rb:134:in `tabs'
+    haml (3.0.18) lib/haml/precompiler.rb:1041:in `block_opened?'
+    haml (3.0.18) lib/haml/precompiler.rb:387:in `push_script'
+    haml (3.0.18) lib/haml/precompiler.rb:224:in `process_line'
+    haml (3.0.18) lib/haml/precompiler.rb:178:in `precompile'
+    haml (3.0.18) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (60.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DepartmentsController#index (for 127.0.0.1 at 2010-09-13 14:37:28) [GET]
+  [4;36;1mDepartment Load (0.2ms)[0m   [0;1mSELECT * FROM `departments` [0m
+Rendering template within layouts/application
+Rendering departments/index
+Rendered layouts/_header (1.8ms)
+Rendered layouts/_footer (1.6ms)
+Completed in 32ms (View: 26, DB: 0) | 200 OK [http://localhost/departments]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DepartmentsController#index (for 127.0.0.1 at 2010-09-13 14:38:11) [GET]
+  [4;35;1mDepartment Load (0.2ms)[0m   [0mSELECT * FROM `departments` [0m
+Rendering template within layouts/application
+Rendering departments/index
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/departments]

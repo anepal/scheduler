@@ -1607,3 +1607,51 @@ Processing DepartmentsController#index (for 127.0.0.1 at 2010-09-13 13:33:25) [G
 
 Processing ApplicationController#index (for 127.0.0.1 at 2010-09-13 13:33:25) [GET]
   [4;35;1mSQL (43.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDepartment Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `departments`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDepartment Create (0.2ms)[0m   [0mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('Pharmacy', NULL, '2010-09-13 08:35:41', '2010-09-13 08:35:41', NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDepartment Create (0.2ms)[0m   [0;1mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('OPD', NULL, '2010-09-13 08:35:41', '2010-09-13 08:35:41', NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /departments with {} and HTTP headers {}
+
+
+Processing DepartmentsController#index (for 127.0.0.1 at 2010-09-13 14:20:41) [GET]
+  [4;36;1mDepartment Load (0.2ms)[0m   [0;1mSELECT * FROM `departments` [0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-13 14:20:41) [GET]
+  [4;35;1mSQL (71.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDepartment Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `departments`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDepartment Create (0.2ms)[0m   [0mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('Pharmacy', NULL, '2010-09-13 08:45:22', '2010-09-13 08:45:22', NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDepartment Create (0.1ms)[0m   [0;1mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('OPD', NULL, '2010-09-13 08:45:22', '2010-09-13 08:45:22', NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+REQUESTING PAGE: GET /departments with {} and HTTP headers {}
+
+
+Processing DepartmentsController#index (for 127.0.0.1 at 2010-09-13 14:30:22) [GET]
+  [4;36;1mDepartment Load (0.2ms)[0m   [0;1mSELECT * FROM `departments` [0m
+Rendering template within layouts/application
+Rendering departments/index
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-13 14:30:22) [GET]
+  [4;35;1mSQL (50.3ms)[0m   [0mROLLBACK[0m

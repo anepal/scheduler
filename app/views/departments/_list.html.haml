@@ -1,0 +1,8 @@
+%tr
+    %td
+        =list_counter + 1
+    %td 
+        =list.name
+    %td
+        = link_to 'Delete', department_path(list), :method => 'delete', :confirm => 'Really delete?'
+        = link_to 'Edit', edit_department_path(list)
