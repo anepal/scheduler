@@ -8,7 +8,7 @@ end
 Given /^the following doctor records$/ do |table|
   # table is a Cucumber::Ast::Table
  table.hashes.each do |hash|
-   Doctor.create!(hash)
+    Doctor.create!(hash)
  end
 end
 
