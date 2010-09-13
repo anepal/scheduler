@@ -25,8 +25,8 @@ Scenario: Edit Doctor
      |full_name|address|
      |Ram|Kathmandu,Nepal|
      |Shyam|Butwal,Nepal|
-    Then I am on Edit "Ram" I
-    Then I fill in "Address" with "Biratnagar,Nepal"
-    When I press "Update"
-    Then I should see "Doctor successfully updated"
-     And I should see "Biratnagar,Nepal"
+    When I am on Edit "Ram"
+    And I fill in "Address" with "Birgunj,Nepal"
+    When I press "Save"
+    Then I should see "Doctor was successfully updated"
+     And I should see "Birgunj,Nepal"
