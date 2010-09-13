@@ -3,14 +3,16 @@ require 'spec_helper'
 describe Department do
   before(:each) do
     @valid_attributes = {
-      :name => "value for name",
-      :address => "value for address",
-      :phone => "value for phone",
-      :optional_info => "value for optional_info"
+      :name => "OPD",
+      :address => "Kantipath",
+      :phone => "01434343",
+      :optional_info => "additional info"
     }
+    Department.create(@valid_attributes)
   end
 
-  it "should create a new instance given valid attributes" do
-    Department.create!(@valid_attributes)
+  it "should enforce the uniqueness of the users' name" do
+    new_user=Department.new(:name=>"OPD")
+    new_user.should_not be_valid
   end
 end
