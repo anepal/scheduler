@@ -3,5 +3,4 @@ class DoctorsController < InheritedResources::Base
   actions :all
   respond_to :html
   respond_to :js
-
 end
