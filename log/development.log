@@ -280,3 +280,667 @@ Rendering doctors/index
 Rendered layouts/_header (0.2ms)
 Rendered layouts/_footer (1.6ms)
 Completed in 21ms (View: 15, DB: 0) | 200 OK [http://localhost/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 09:38:43) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 14ms (View: 3, DB: 0) | 200 OK [http://localhost/doctors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 09:39:58) [GET]
+  [4;36;1mDoctor Load (0.1ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 09:39:59) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/doctors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 09:40:01) [GET]
+  [4;36;1mDoctor Load (0.2ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 09:40:14) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered layouts/_header (0.4ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/doctors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 09:40:35) [GET]
+  [4;36;1mDoctor Load (0.2ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 17ms (View: 12, DB: 0) | 200 OK [http://localhost/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 09:40:37) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/doctors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 09:40:51) [GET]
+  [4;36;1mDoctor Load (0.2ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+
+ActionView::TemplateError (You don't need to use "- end" in Haml. Un-indent to close a block:
+- if foo?
+  %strong Foo!
+- else
+  Not foo.
+%p This line is un-indented, so it isn't part of the "if" block) on line #14 of app/views/doctors/index.html.haml:
+11:                 = ""
+12:        
+13:         = render :partial => "list", :collection => @doctors
+14:         - end
+15:     = link_to "Create New", new_doctor_path
+
+    app/views/doctors/index.html.haml:14
+    haml (3.0.18) lib/haml/precompiler.rb:229:in `process_line'
+    haml (3.0.18) lib/haml/precompiler.rb:178:in `precompile'
+    haml (3.0.18) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (58.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 09:40:59) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+
+ActionView::TemplateError (wrong number of arguments (2 for 1)) in app/views/doctors/index.html.haml:
+
+    haml (3.0.18) lib/haml/precompiler.rb:431:in `close_element'
+    haml (3.0.18) lib/haml/precompiler.rb:431:in `send'
+    haml (3.0.18) lib/haml/precompiler.rb:431:in `close'
+    haml (3.0.18) lib/haml/precompiler.rb:199:in `process_indent'
+    haml (3.0.18) lib/haml/precompiler.rb:199:in `times'
+    haml (3.0.18) lib/haml/precompiler.rb:199:in `process_indent'
+    haml (3.0.18) lib/haml/precompiler.rb:170:in `precompile'
+    haml (3.0.18) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (129.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 09:41:11) [GET]
+  [4;36;1mDoctor Load (0.2ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+
+ActionView::TemplateError (You don't need to use "- end" in Haml. Un-indent to close a block:
+- if foo?
+  %strong Foo!
+- else
+  Not foo.
+%p This line is un-indented, so it isn't part of the "if" block) on line #14 of app/views/doctors/index.html.haml:
+11:                 = ""
+12:        
+13:         = render :partial => "list", :collection => @doctors
+14:         -end
+15:     = link_to "Create New", new_doctor_path
+
+    app/views/doctors/index.html.haml:14
+    haml (3.0.18) lib/haml/precompiler.rb:229:in `process_line'
+    haml (3.0.18) lib/haml/precompiler.rb:178:in `precompile'
+    haml (3.0.18) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 09:41:35) [GET]
+  [4;35;1mDoctor Load (0.1ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+
+ActionView::TemplateError (You don't need to use "- end" in Haml. Un-indent to close a block:
+- if foo?
+  %strong Foo!
+- else
+  Not foo.
+%p This line is un-indented, so it isn't part of the "if" block) on line #14 of app/views/doctors/index.html.haml:
+11:                     = ""
+12: 
+13:             = render :partial => "list", :collection => @doctors
+14:         - end
+15:     = link_to "Create New", new_doctor_path
+
+    app/views/doctors/index.html.haml:14
+    haml (3.0.18) lib/haml/precompiler.rb:229:in `process_line'
+    haml (3.0.18) lib/haml/precompiler.rb:178:in `precompile'
+    haml (3.0.18) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (55.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 09:41:36) [GET]
+  [4;36;1mDoctor Load (0.2ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+
+ActionView::TemplateError (You don't need to use "- end" in Haml. Un-indent to close a block:
+- if foo?
+  %strong Foo!
+- else
+  Not foo.
+%p This line is un-indented, so it isn't part of the "if" block) on line #14 of app/views/doctors/index.html.haml:
+11:                     = ""
+12: 
+13:             = render :partial => "list", :collection => @doctors
+14:         - end
+15:     = link_to "Create New", new_doctor_path
+
+    app/views/doctors/index.html.haml:14
+    haml (3.0.18) lib/haml/precompiler.rb:229:in `process_line'
+    haml (3.0.18) lib/haml/precompiler.rb:178:in `precompile'
+    haml (3.0.18) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (124.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 09:41:47) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/doctors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 09:42:28) [GET]
+  [4;36;1mDoctor Load (0.2ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+
+ActionView::TemplateError (You don't need to use "- end" in Haml. Un-indent to close a block:
+- if foo?
+  %strong Foo!
+- else
+  Not foo.
+%p This line is un-indented, so it isn't part of the "if" block) on line #16 of app/views/doctors/index.html.haml:
+13:             = render :partial => "list", :collection => @doctors
+14:         - else
+15:             Doctors list is empty.
+16:         - end
+17:     = link_to "Create New", new_doctor_path
+
+    app/views/doctors/index.html.haml:16
+    haml (3.0.18) lib/haml/precompiler.rb:229:in `process_line'
+    haml (3.0.18) lib/haml/precompiler.rb:178:in `precompile'
+    haml (3.0.18) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (54.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 09:43:36) [GET]
+  [4;35;1mDoctor Load (0.1ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+
+ActionView::TemplateError (You don't need to use "- end" in Haml. Un-indent to close a block:
+- if foo?
+  %strong Foo!
+- else
+  Not foo.
+%p This line is un-indented, so it isn't part of the "if" block) on line #16 of app/views/doctors/index.html.haml:
+13:             = render :partial => "list", :collection => @doctors
+14:         - else
+15:             ="Doctors list is empty."
+16:         - end
+17:     = link_to "Create New", new_doctor_path
+
+    app/views/doctors/index.html.haml:16
+    haml (3.0.18) lib/haml/precompiler.rb:229:in `process_line'
+    haml (3.0.18) lib/haml/precompiler.rb:178:in `precompile'
+    haml (3.0.18) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (56.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 09:43:37) [GET]
+  [4;36;1mDoctor Load (0.2ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+
+ActionView::TemplateError (You don't need to use "- end" in Haml. Un-indent to close a block:
+- if foo?
+  %strong Foo!
+- else
+  Not foo.
+%p This line is un-indented, so it isn't part of the "if" block) on line #16 of app/views/doctors/index.html.haml:
+13:             = render :partial => "list", :collection => @doctors
+14:         - else
+15:             ="Doctors list is empty."
+16:         - end
+17:     = link_to "Create New", new_doctor_path
+
+    app/views/doctors/index.html.haml:16
+    haml (3.0.18) lib/haml/precompiler.rb:229:in `process_line'
+    haml (3.0.18) lib/haml/precompiler.rb:178:in `precompile'
+    haml (3.0.18) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (155.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 09:45:21) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+
+ActionView::TemplateError (You don't need to use "- end" in Haml. Un-indent to close a block:
+- if foo?
+  %strong Foo!
+- else
+  Not foo.
+%p This line is un-indented, so it isn't part of the "if" block) on line #16 of app/views/doctors/index.html.haml:
+13:             = render :partial => "list", :collection => @doctors
+14:         - else
+15:             ="Doctors list is empty."
+16:         - end
+17:     = link_to "Create New", new_doctor_path
+
+    app/views/doctors/index.html.haml:16
+    haml (3.0.18) lib/haml/precompiler.rb:229:in `process_line'
+    haml (3.0.18) lib/haml/precompiler.rb:178:in `precompile'
+    haml (3.0.18) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (54.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 09:45:22) [GET]
+  [4;36;1mDoctor Load (0.2ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+
+ActionView::TemplateError (You don't need to use "- end" in Haml. Un-indent to close a block:
+- if foo?
+  %strong Foo!
+- else
+  Not foo.
+%p This line is un-indented, so it isn't part of the "if" block) on line #16 of app/views/doctors/index.html.haml:
+13:             = render :partial => "list", :collection => @doctors
+14:         - else
+15:             ="Doctors list is empty."
+16:         - end
+17:     = link_to "Create New", new_doctor_path
+
+    app/views/doctors/index.html.haml:16
+    haml (3.0.18) lib/haml/precompiler.rb:229:in `process_line'
+    haml (3.0.18) lib/haml/precompiler.rb:178:in `precompile'
+    haml (3.0.18) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (58.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 09:45:25) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+
+ActionView::TemplateError (You don't need to use "- end" in Haml. Un-indent to close a block:
+- if foo?
+  %strong Foo!
+- else
+  Not foo.
+%p This line is un-indented, so it isn't part of the "if" block) on line #16 of app/views/doctors/index.html.haml:
+13:             = render :partial => "list", :collection => @doctors
+14:         - else
+15:             ="Doctors list is empty."
+16:         - end
+17:     = link_to "Create New", new_doctor_path
+
+    app/views/doctors/index.html.haml:16
+    haml (3.0.18) lib/haml/precompiler.rb:229:in `process_line'
+    haml (3.0.18) lib/haml/precompiler.rb:178:in `precompile'
+    haml (3.0.18) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (130.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 09:45:50) [GET]
+  [4;36;1mDoctor Load (0.2ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+
+ActionView::TemplateError (Illegal nesting: nesting within plain text is illegal.) on line #15 of app/views/doctors/index.html.haml:
+12: 
+13:             = render :partial => "list", :collection => @doctors
+14:         else
+15:             ="Doctors list is empty."
+16:         end
+17:     = link_to "Create New", new_doctor_path
+
+    app/views/doctors/index.html.haml:15
+    haml (3.0.18) lib/haml/precompiler.rb:354:in `push_plain'
+    haml (3.0.18) lib/haml/precompiler.rb:278:in `process_line'
+    haml (3.0.18) lib/haml/precompiler.rb:178:in `precompile'
+    haml (3.0.18) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.18) rails/./lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (58.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 09:48:38) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/doctors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 09:49:34) [GET]
+  [4;36;1mDoctor Load (0.1ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered layouts/_header (0.1ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#new (for 127.0.0.1 at 2010-09-13 09:49:35) [GET]
+  [4;35;1mDoctor Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+Rendering template within layouts/application
+Rendering doctors/new
+Rendered doctors/_new (6.6ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/doctors/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 09:49:40) [GET]
+  [4;36;1mDoctor Load (0.2ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#new (for 127.0.0.1 at 2010-09-13 09:49:42) [GET]
+  [4;35;1mDoctor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+Rendering template within layouts/application
+Rendering doctors/new
+Rendered doctors/_new (6.1ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.7ms)
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/doctors/new]
