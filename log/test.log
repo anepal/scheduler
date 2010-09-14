@@ -366,3 +366,406 @@ Migrating to CreateDepartments (20100913072117)
   [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
   [4;35;1mSQL (0.9ms)[0m   [0mdescribe `doctors`[0m
   [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (127.7ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (220.2ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateDoctors (20100911055119)
+  [4;35;1mSQL (85.3ms)[0m   [0mCREATE TABLE `doctors` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `full_name` varchar(255), `address` varchar(255), `phone` varchar(255), `email` varchar(255), `optional_info` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100911055119')[0m
+Migrating to CreateDepartments (20100913072117)
+  [4;35;1mSQL (86.5ms)[0m   [0mCREATE TABLE `departments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `address` varchar(255), `phone` varchar(255), `optional_info` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100913072117')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `departments`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `departments`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `departments`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `doctors`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `doctors`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Create (0.3ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Maharajgunj', '2010-09-13 12:07:59', '2010-09-13 12:07:59', 'description here', 'Bishnu', '9803449843', 'realusers@gmail.com')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (97.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Create (0.4ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Maharajgunj', '2010-09-13 12:08:21', '2010-09-13 12:08:21', 'description here', 'Bishnu', '9803449843', 'realusers@gmail.com')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (54.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Create (0.2ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Maharajgunj', '2010-09-13 12:08:36', '2010-09-13 12:08:36', 'description here', 'Bishnu', '9803449843', 'realusers@gmail.com')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (56.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishnu') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.2ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Maharajgunj', '2010-09-13 12:08:59', '2010-09-13 12:08:59', 'description here', 'Bishnu', '9803449843', 'realusers@gmail.com')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (50.8ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishnu') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Create (0.2ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Maharajgunj', '2010-09-13 12:09:20', '2010-09-13 12:09:20', 'description here', 'Bishnu', '9803449843', 'realusers@gmail.com')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (56.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Create (0.2ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Maharajgunj', '2010-09-13 12:11:31', '2010-09-13 12:11:31', 'description here', 'Bishnu', '9803449843', 'realusers@gmail.com')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (55.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishnu') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.2ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Maharajgunj', '2010-09-13 12:12:04', '2010-09-13 12:12:04', 'description here', 'Bishnu', '9803449843', 'realusers@gmail.com')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (52.6ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishnu') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.1ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishnu') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.2ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Maharajgunj', '2010-09-13 12:12:18', '2010-09-13 12:12:18', 'description here', 'Bishnu', '9803449843', 'realusers@gmail.com')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (44.9ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishnu') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.1ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishnu') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.2ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Maharajgunj', '2010-09-13 12:13:19', '2010-09-13 12:13:19', 'description here', 'Bishnu', '9803449843', 'realusers@gmail.com')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishnu') LIMIT 1[0m
+  [4;35;1mSQL (59.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Create (0.2ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Maharajgunj', '2010-09-13 12:13:37', '2010-09-13 12:13:37', 'description here', 'Bishnu', '9803449843', 'realusers@gmail.com')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (63.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Create (0.2ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Maharajgunj', '2010-09-13 12:14:18', '2010-09-13 12:14:18', 'description here', 'Bishnu', '9803449843', 'realusers@gmail.com')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (82.8ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDoctor Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDoctor Exists (0.2ms)[0m   [0mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishnu') LIMIT 1[0m
+  [4;36;1mDoctor Create (0.2ms)[0m   [0;1mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Maharajgunj', '2010-09-13 12:14:35', '2010-09-13 12:14:35', 'description here', 'Bishnu', '9803449843', 'realusers@gmail.com')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Bishnu') LIMIT 1[0m
+  [4;35;1mSQL (50.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing DoctorsController#index (for 0.0.0.0 at 2010-09-13 18:00:25) [GET]
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://test.host/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing DoctorsController#index (for 0.0.0.0 at 2010-09-13 18:00:25) [GET]
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mDoctor Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing DoctorsController#index (for 0.0.0.0 at 2010-09-13 18:00:26) [GET]
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 1ms (View: 0, DB: 1) | 200 OK [http://test.host/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing DoctorsController#index (for 0.0.0.0 at 2010-09-13 18:00:50) [GET]
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://test.host/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing DoctorsController#index (for 0.0.0.0 at 2010-09-13 18:00:50) [GET]
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing DoctorsController#index (for 0.0.0.0 at 2010-09-13 18:00:50) [GET]
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing DoctorsController#index (for 0.0.0.0 at 2010-09-13 18:05:51) [GET]
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://test.host/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing DoctorsController#index (for 0.0.0.0 at 2010-09-13 18:05:51) [GET]
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing DoctorsController#index (for 0.0.0.0 at 2010-09-13 18:05:51) [GET]
+Rendering template within layouts/application
+Rendering doctors/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing DepartmentsController#index (for 0.0.0.0 at 2010-09-13 18:06:06) [GET]
+Rendering template within layouts/application
+Rendering departments/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://test.host/departments]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing DepartmentsController#index (for 0.0.0.0 at 2010-09-13 18:06:06) [GET]
+Rendering template within layouts/application
+Rendering departments/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/departments]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing DepartmentsController#index (for 0.0.0.0 at 2010-09-13 18:06:06) [GET]
+Rendering template within layouts/application
+Rendering departments/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/departments]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDepartment Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `departments`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDepartment Create (0.2ms)[0m   [0mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('value for name', 'value for address', '2010-09-13 12:21:59', '2010-09-13 12:21:59', 'value for optional_info', 'value for phone')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (46.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDepartment Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `departments`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDepartment Create (0.2ms)[0m   [0mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('OPD', 'Kantipath', '2010-09-13 12:32:51', '2010-09-13 12:32:51', 'additional info', '01434343')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (52.9ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDepartment Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `departments`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDepartment Exists (0.2ms)[0m   [0mSELECT `departments`.id FROM `departments` WHERE (`departments`.`name` = BINARY 'OPD') LIMIT 1[0m
+  [4;36;1mDepartment Create (0.2ms)[0m   [0;1mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('OPD', 'Kantipath', '2010-09-13 12:34:07', '2010-09-13 12:34:07', 'additional info', '01434343')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mDepartment Exists (0.2ms)[0m   [0;1mSELECT `departments`.id FROM `departments` WHERE (`departments`.`name` = BINARY 'OPD') LIMIT 1[0m
+  [4;35;1mSQL (78.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing DepartmentsController#index (for 0.0.0.0 at 2010-09-13 18:19:15) [GET]
+Rendering template within layouts/application
+Rendering departments/index
+Completed in 3ms (View: 0, DB: 0) | 200 OK [http://test.host/departments]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing DepartmentsController#index (for 0.0.0.0 at 2010-09-13 18:19:15) [GET]
+Rendering template within layouts/application
+Rendering departments/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/departments]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing DepartmentsController#index (for 0.0.0.0 at 2010-09-13 18:19:15) [GET]
+Rendering template within layouts/application
+Rendering departments/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/departments]
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mDoctor Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mDoctor Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mDoctor Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mDoctor Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mDoctor Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mDoctor Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mDoctor Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mDoctor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mDoctor Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mDoctor Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mDoctor Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mDoctor Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m

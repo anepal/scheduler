@@ -2294,3 +2294,190 @@ Rendered doctors/_new (83.6ms)
 Rendered layouts/_header (0.2ms)
 Rendered layouts/_footer (0.2ms)
 Completed in 96ms (View: 88, DB: 2) | 200 OK [http://localhost/doctors/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#edit (for 127.0.0.1 at 2010-09-13 17:12:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDoctor Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mDoctor Load (0.1ms)[0m   [0;1mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/edit
+Rendered doctors/_new (8.0ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 21ms (View: 13, DB: 3) | 200 OK [http://localhost/doctors/1/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#edit (for 127.0.0.1 at 2010-09-13 17:12:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDoctor Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mDoctor Load (0.1ms)[0m   [0;1mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/edit
+Rendered doctors/_new (7.8ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 21ms (View: 12, DB: 2) | 200 OK [http://localhost/doctors/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 17:12:46) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+  [4;36;1mDoctor Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+Rendered doctors/_list (6.2ms)
+Rendered doctors/_list (1.0ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#edit (for 127.0.0.1 at 2010-09-13 17:12:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDoctor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mDoctor Load (0.1ms)[0m   [0;1mSELECT * FROM `doctors` WHERE (`doctors`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering doctors/edit
+Rendered doctors/_new (7.5ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/doctors/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 17:12:53) [GET]
+  [4;35;1mDoctor Load (0.2ms)[0m   [0mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+  [4;36;1mDoctor Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+Rendered doctors/_list (5.7ms)
+Rendered doctors/_list (1.0ms)
+Rendered layouts/_header (0.3ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://localhost/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#new (for 127.0.0.1 at 2010-09-13 17:17:36) [GET]
+  [4;35;1mDoctor Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+Rendering template within layouts/application
+Rendering doctors/new
+Rendered doctors/_new (4.2ms)
+Rendered layouts/_header (0.1ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://localhost/doctors/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 17:19:47) [GET]
+  [4;36;1mDoctor Load (0.2ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+  [4;35;1mDoctor Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+Rendered doctors/_list (6.3ms)
+Rendered doctors/_list (1.6ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/doctors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 17:19:48) [GET]
+  [4;36;1mDoctor Load (0.2ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+  [4;35;1mDoctor Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+Rendered doctors/_list (6.4ms)
+Rendered doctors/_list (1.1ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 18ms (View: 11, DB: 2) | 200 OK [http://localhost/doctors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (94.4ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (244.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (11.7ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateDoctors (20100911055119)
+  [4;35;1mSQL (117.5ms)[0m   [0mCREATE TABLE `doctors` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `full_name` varchar(255), `address` varchar(255), `phone` varchar(255), `email` varchar(255), `optional_info` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (55.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100911055119')[0m
+Migrating to CreateDepartments (20100913072117)
+  [4;35;1mSQL (84.3ms)[0m   [0mCREATE TABLE `departments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `address` varchar(255), `phone` varchar(255), `optional_info` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (44.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100913072117')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mSHOW FIELDS FROM `departments`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `departments`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `departments`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `doctors`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `doctors`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#index (for 127.0.0.1 at 2010-09-13 17:39:59) [GET]
+  [4;36;1mDoctor Load (0.3ms)[0m   [0;1mSELECT * FROM `doctors` [0m
+Rendering template within layouts/application
+Rendering doctors/index
+Rendered layouts/_header (1.1ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 24ms (View: 21, DB: 1) | 200 OK [http://localhost/doctors]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DoctorsController#new (for 127.0.0.1 at 2010-09-13 17:40:02) [GET]
+  [4;35;1mDoctor Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `doctors`[0m
+Rendering template within layouts/application
+Rendering doctors/new
+Rendered doctors/_new (13.3ms)
+Rendered layouts/_header (0.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 36ms (View: 28, DB: 1) | 200 OK [http://localhost/doctors/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DepartmentsController#index (for 127.0.0.1 at 2010-09-13 17:40:10) [GET]
+  [4;36;1mDepartment Load (0.3ms)[0m   [0;1mSELECT * FROM `departments` [0m
+Rendering template within layouts/application
+Rendering departments/index
+Rendered layouts/_header (0.1ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 15ms (View: 11, DB: 1) | 200 OK [http://localhost/departments]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DepartmentsController#new (for 127.0.0.1 at 2010-09-13 17:40:12) [GET]
+  [4;35;1mDepartment Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `departments`[0m
+
+ActionView::MissingTemplate (Missing template departments/new.erb in view path app/views):
+  haml (3.0.18) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
