@@ -1,0 +1,6 @@
+.maincont
+  %h3= 'Edit department'
+  = render :partial=>'new',:locals => { :btn => "Save" }
+  = link_to 'Create New', new_department_path
+  = link_to 'Back', department_path
+  = link_to 'Show All', departments_path

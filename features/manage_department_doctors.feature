@@ -18,6 +18,5 @@ Scenario: Department Doctors List
     |1|1|10:20|12:20|
     |1|2|12:00|1:00|
   When I am on the list of departments
-  Then I follow Show Doctor page for "OPD"
-  And I should see "OPD  Department"
-  And I should see "Ram Prasad, Hari Kumar"
+  
+  

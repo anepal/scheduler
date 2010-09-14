@@ -19,6 +19,9 @@ module NavigationHelpers
     when /Edit "([^\"]+)"/
       "/doctors/#{Doctor.find_by_full_name($1).id}/edit"
 
+      when /Edit Department "([^\"]+)"/
+      "/departments/#{Department.find_by_name($1).id}/edit"
+
     when /the Show Department "([^\"]+)"/
       "/departments/show_doctors/#{Department.find_by_name($1).id}"
 
