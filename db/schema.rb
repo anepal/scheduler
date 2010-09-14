@@ -9,7 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100913072117) do
+ActiveRecord::Schema.define(:version => 20100913132754) do
+
+  create_table "department_doctors", :force => true do |t|
+    t.integer  "doctor_id"
+    t.integer  "department_id"
+    t.string   "start_time"
+    t.string   "end_time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "departments", :force => true do |t|
     t.string   "name"

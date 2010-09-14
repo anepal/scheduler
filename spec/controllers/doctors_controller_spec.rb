@@ -12,8 +12,10 @@ describe DoctorsController do
   describe DoctorsController, 'handling GET /doctors' do
 
     before do
+#      @doctors = (1..5).map { |i| mock_model(Doctor, :full_name => "doctor-#{i}") }
       @doctor=mock_model(Doctor)
-      Doctor.stub(:find).and_return([@doctor])
+     
+     @doctor= Doctor.stub(:find).and_return([@doctor])
     end
 
     def do_get
@@ -29,10 +31,12 @@ describe DoctorsController do
       do_get
       response.should render_template('index')
     end
-#
-#    it "should find all doctors" do
-#      Doctor.should_receive(:find).with(:all).and_return([@doctor])
-#    end
+
+    it "should find all doctors" do
+      Doctor.should_receive(:all,:limit=>0).and_return([@doctor])
+#      Doctor.stub!(:find).and_return(@user)
+
+    end
 
     it "should assign found Doctor to the view" do
       do_get
