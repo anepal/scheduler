@@ -18,6 +18,12 @@ module NavigationHelpers
 
     when /Edit "([^\"]+)"/
       "/doctors/#{Doctor.find_by_full_name($1).id}/edit"
+
+    when /the Show Department "([^\"]+)"/
+      "/departments/show_doctors/#{Department.find_by_name($1).id}"
+
+
+
       # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

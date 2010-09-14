@@ -30,3 +30,14 @@ Scenario: Edit Doctor
     When I press "Save"
     Then I should see "Doctor was successfully updated"
      And I should see "Birgunj,Nepal"
+
+Scenario: Delete Doctor
+  Given I am on the list of doctors
+    Given the following doctor records
+     |full_name|address|
+     |Ram|Kathmandu,Nepal|
+     |Shyam|Butwal,Nepal|
+    When I am on Delete "Ram"
+    Then I press "OK"
+    And I am on the list of doctors
+    And I should not see "Ram"
