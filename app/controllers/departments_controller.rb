@@ -4,7 +4,7 @@ class DepartmentsController < InheritedResources::Base
   respond_to :html
   respond_to :js
  def show_doctors
-   raise Department.find(params[:id]).inspect
-  @doctors=Department.find(params[:id]).doctors
+   @department=Department.find(params[:id])
+   @doctors=Department.find(params[:id]).doctors
  end
 end

@@ -1,0 +1,22 @@
+.maincont
+  %h3
+    = 'Show department'
+  %div
+    =flash[:notice]
+  %p
+    = label_tag "Name:"
+    = @department.name
+  %p
+    = label_tag "Address:"
+    = @department.address
+  %p
+    = label_tag "Phone:"
+    = @department.phone
+  %br
+  %br
+  %p
+    = link_to 'Edit', edit_department_path(@department)
+    = link_to 'Back', department_path
+    = link_to 'Show All', departments_path
+
+  
