@@ -16,8 +16,7 @@ module NavigationHelpers
     when /the list of departments/
       departments_path
 
-
-      when /Edit "([^\"]+)"/
+    when /Edit "([^\"]+)"/
       "/doctors/#{Doctor.find_by_full_name($1).id}/edit"
       # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

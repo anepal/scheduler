@@ -2001,3 +2001,185 @@ Rendered layouts/_header (0.2ms)
 Rendered layouts/_footer (0.2ms)
 Completed in 6ms (View: 4, DB: 0) | 200 OK [http://www.example.com/doctors/20]
   [4;36;1mSQL (52.2ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (25.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDepartment Columns (67.8ms)[0m   [0mSHOW FIELDS FROM `departments`[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDepartment Exists (19.1ms)[0m   [0mSELECT `departments`.id FROM `departments` WHERE (`departments`.`name` = BINARY 'OPD') LIMIT 1[0m
+  [4;36;1mDepartment Create (49.3ms)[0m   [0;1mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('OPD', 'Kathmandu', '2010-09-14 05:58:58', '2010-09-14 05:58:58', NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDepartment Exists (0.3ms)[0m   [0mSELECT `departments`.id FROM `departments` WHERE (`departments`.`name` = BINARY 'Emergency') LIMIT 1[0m
+  [4;36;1mDepartment Create (0.2ms)[0m   [0;1mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('Emergency', 'Patan', '2010-09-14 05:58:58', '2010-09-14 05:58:58', NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (57.5ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDepartment Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `departments`[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDepartment Exists (0.2ms)[0m   [0mSELECT `departments`.id FROM `departments` WHERE (`departments`.`name` = BINARY 'OPD') LIMIT 1[0m
+  [4;36;1mDepartment Create (0.2ms)[0m   [0;1mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('OPD', 'Kathmandu', '2010-09-14 06:00:15', '2010-09-14 06:00:15', NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDepartment Exists (0.2ms)[0m   [0mSELECT `departments`.id FROM `departments` WHERE (`departments`.`name` = BINARY 'Emergency') LIMIT 1[0m
+  [4;36;1mDepartment Create (0.1ms)[0m   [0;1mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('Emergency', 'Patan', '2010-09-14 06:00:15', '2010-09-14 06:00:15', NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Columns (33.6ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram Prasad') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.2ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Kathmandu', '2010-09-14 06:00:15', '2010-09-14 06:00:15', NULL, 'Ram Prasad', '9808989898', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Hari Kumar') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.1ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Patan', '2010-09-14 06:00:15', '2010-09-14 06:00:15', NULL, 'Hari Kumar', '9808989890', NULL)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.1ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Hari Rimal') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.1ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Patan', '2010-09-14 06:00:15', '2010-09-14 06:00:15', NULL, 'Hari Rimal', '7808989890', NULL)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (71.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDepartment Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `departments`[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDepartment Exists (0.2ms)[0m   [0mSELECT `departments`.id FROM `departments` WHERE (`departments`.`name` = BINARY 'OPD') LIMIT 1[0m
+  [4;36;1mDepartment Create (0.2ms)[0m   [0;1mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('OPD', 'Kathmandu', '2010-09-14 06:01:15', '2010-09-14 06:01:15', NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDepartment Exists (0.2ms)[0m   [0mSELECT `departments`.id FROM `departments` WHERE (`departments`.`name` = BINARY 'Emergency') LIMIT 1[0m
+  [4;36;1mDepartment Create (0.2ms)[0m   [0;1mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('Emergency', 'Patan', '2010-09-14 06:01:15', '2010-09-14 06:01:15', NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram Prasad') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.2ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Kathmandu', '2010-09-14 06:01:15', '2010-09-14 06:01:15', NULL, 'Ram Prasad', '9808989898', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Hari Kumar') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.1ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Patan', '2010-09-14 06:01:15', '2010-09-14 06:01:15', NULL, 'Hari Kumar', '9808989890', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Hari Rimal') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.1ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Patan', '2010-09-14 06:01:15', '2010-09-14 06:01:15', NULL, 'Hari Rimal', '7808989890', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mDepartmentDoctor Columns (0.0ms)[0m   [0mMysql::Error: Table 'scheduler_test.department_doctors' doesn't exist: SHOW FIELDS FROM `department_doctors`[0m
+  [4;36;1mSQL (68.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDepartment Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `departments`[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDepartment Exists (0.2ms)[0m   [0mSELECT `departments`.id FROM `departments` WHERE (`departments`.`name` = BINARY 'OPD') LIMIT 1[0m
+  [4;36;1mDepartment Create (0.2ms)[0m   [0;1mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('OPD', 'Kathmandu', '2010-09-14 06:08:28', '2010-09-14 06:08:28', NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDepartment Exists (0.2ms)[0m   [0mSELECT `departments`.id FROM `departments` WHERE (`departments`.`name` = BINARY 'Emergency') LIMIT 1[0m
+  [4;36;1mDepartment Create (0.1ms)[0m   [0;1mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('Emergency', 'Patan', '2010-09-14 06:08:28', '2010-09-14 06:08:28', NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram Prasad') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.1ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Kathmandu', '2010-09-14 06:08:28', '2010-09-14 06:08:28', NULL, 'Ram Prasad', '9808989898', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.1ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Hari Kumar') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.1ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Patan', '2010-09-14 06:08:28', '2010-09-14 06:08:28', NULL, 'Hari Kumar', '9808989890', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Hari Rimal') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.2ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Patan', '2010-09-14 06:08:29', '2010-09-14 06:08:29', NULL, 'Hari Rimal', '7808989890', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mDepartmentDoctor Columns (0.0ms)[0m   [0mMysql::Error: Table 'scheduler_test.department_doctors' doesn't exist: SHOW FIELDS FROM `department_doctors`[0m
+  [4;36;1mSQL (57.8ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDepartment Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `departments`[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDepartment Exists (0.2ms)[0m   [0mSELECT `departments`.id FROM `departments` WHERE (`departments`.`name` = BINARY 'OPD') LIMIT 1[0m
+  [4;36;1mDepartment Create (0.2ms)[0m   [0;1mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('OPD', 'Kathmandu', '2010-09-14 06:12:22', '2010-09-14 06:12:22', NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDepartment Exists (0.2ms)[0m   [0mSELECT `departments`.id FROM `departments` WHERE (`departments`.`name` = BINARY 'Emergency') LIMIT 1[0m
+  [4;36;1mDepartment Create (0.1ms)[0m   [0;1mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('Emergency', 'Patan', '2010-09-14 06:12:22', '2010-09-14 06:12:22', NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram Prasad') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.1ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Kathmandu', '2010-09-14 06:12:22', '2010-09-14 06:12:22', NULL, 'Ram Prasad', '9808989898', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.1ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Hari Kumar') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.1ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Patan', '2010-09-14 06:12:22', '2010-09-14 06:12:22', NULL, 'Hari Kumar', '9808989890', NULL)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Hari Rimal') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.1ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Patan', '2010-09-14 06:12:22', '2010-09-14 06:12:22', NULL, 'Hari Rimal', '7808989890', NULL)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mDepartmentDoctor Columns (0.0ms)[0m   [0mMysql::Error: Table 'scheduler_test.department_doctors' doesn't exist: SHOW FIELDS FROM `department_doctors`[0m
+  [4;36;1mSQL (61.5ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDepartment Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `departments`[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDepartment Exists (0.2ms)[0m   [0mSELECT `departments`.id FROM `departments` WHERE (`departments`.`name` = BINARY 'OPD') LIMIT 1[0m
+  [4;36;1mDepartment Create (0.2ms)[0m   [0;1mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('OPD', 'Kathmandu', '2010-09-14 06:14:22', '2010-09-14 06:14:22', NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDepartment Exists (0.2ms)[0m   [0mSELECT `departments`.id FROM `departments` WHERE (`departments`.`name` = BINARY 'Emergency') LIMIT 1[0m
+  [4;36;1mDepartment Create (0.1ms)[0m   [0;1mINSERT INTO `departments` (`name`, `address`, `created_at`, `updated_at`, `optional_info`, `phone`) VALUES('Emergency', 'Patan', '2010-09-14 06:14:22', '2010-09-14 06:14:22', NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `doctors`[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.4ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Ram Prasad') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.2ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Kathmandu', '2010-09-14 06:14:22', '2010-09-14 06:14:22', NULL, 'Ram Prasad', '9808989898', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Hari Kumar') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.1ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Patan', '2010-09-14 06:14:22', '2010-09-14 06:14:22', NULL, 'Hari Kumar', '9808989890', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDoctor Exists (0.2ms)[0m   [0;1mSELECT `doctors`.id FROM `doctors` WHERE (`doctors`.`full_name` = BINARY 'Hari Rimal') LIMIT 1[0m
+  [4;35;1mDoctor Create (0.2ms)[0m   [0mINSERT INTO `doctors` (`address`, `created_at`, `updated_at`, `optional_info`, `full_name`, `phone`, `email`) VALUES('Patan', '2010-09-14 06:14:22', '2010-09-14 06:14:22', NULL, 'Hari Rimal', '7808989890', NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mDepartmentDoctor Columns (0.0ms)[0m   [0mMysql::Error: Table 'scheduler_test.department_doctors' doesn't exist: SHOW FIELDS FROM `department_doctors`[0m
+  [4;36;1mSQL (48.6ms)[0m   [0;1mROLLBACK[0m
