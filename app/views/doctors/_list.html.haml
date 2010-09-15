@@ -4,5 +4,5 @@
     %td 
         =list.full_name
     %td
-        = link_to 'Delete', doctor_path(list), :method => 'delete', :confirm => 'Really delete?'
+        = button_to 'Delete', doctor_path(list), :method => 'delete', :confirm => 'Really delete?'
         = link_to 'Edit', edit_doctor_path(list)

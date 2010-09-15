@@ -1,8 +1,8 @@
 %tr
-    %td
-        =list_counter + 1
-    %td 
-        =list.name
-    %td
-        = link_to 'Delete', department_path(list), :method => 'delete', :confirm => 'Really delete?'
-        = link_to 'Edit', edit_department_path(list)
+  %td= list_counter + 1
+  %td= list.name
+  %td= link_to "Doctors for this dept.", department_doctors_url(list)
+  %td
+    - # Make sure to be both safe and idempotent for non GET operations
+    = button_to 'Delete', department_path(list), :method => 'delete', :confirm => 'Really delete?'
+    = link_to 'Edit', edit_department_path(list)

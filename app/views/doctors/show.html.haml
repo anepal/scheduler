@@ -18,8 +18,8 @@
   %br
   %br
   %p
-    = link_to 'Edit', edit_doctor_path(@doctor)
-    = link_to 'Back', doctor_path
-    = link_to 'Show All', doctors_path
+    = link_to 'Edit', edit_department_doctor_path(@department, @doctor)
+    = link_to 'Back', department_doctor_path(@department)
+    = link_to 'Show All', department_doctors_path(@department)
 
   
