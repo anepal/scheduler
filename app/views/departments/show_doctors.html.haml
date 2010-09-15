@@ -1,2 +1,19 @@
+.maincont
+  %h3
+    = @department.name+" Department"
+      %table
+        %tr
+          %th
+            ="Doctors' Name"
+          %th
+            ="Start Time"
+          %th
+            ="End Time"
+        -for doctor in @doctors
+        %tr
 
-    
+          %td
+            = doctor.full_name
+          %td
+            
+        

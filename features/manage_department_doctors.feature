@@ -3,20 +3,22 @@ Feature: List the schedule of doctors in a department
   As an administrator
   I want to see schedule of doctors department wise
 
-Scenario: Department Doctors List
-  Given the following department records
-    |name|address|
-    |OPD|Kathmandu|
-    |Emergency|Patan|
-  Given the following doctors records
-    |full_name|address|phone|
-    |Ram Prasad|Kathmandu|9808989898|
-    |Hari Kumar|Patan|9808989890|
-    |Hari Rimal|Patan|7808989890|
-  Given the following department_doctors records
-    |department_id|doctor_id|start_time|end_time|
-    |1|1|10:20|12:20|
-    |1|2|12:00|1:00|
-  When I am on the list of departments
+Background:
+ Given the departments
+  |name|address|phone|
+  |OPD|Kathmandu|9808989898|
+  |Pharmacy|Patan|9808989890|
+  |ENT|Patan|7808989890|
+  And the "OPD" has the following doctors schedule
+   |full_name|phone|start_time|end_time|
+   |Ram Prasad|9808989898|12:15pm|2 pm|
+   |Hari Kumar|9808989890|10:00am|11:00am|
+   |Hari Rimal|7808989890|3pm|4pm|
+Scenario: See doctor schedule
+  Given I am on the list of departments
+  When I follow  the Show Doctor for the "OPD"
+  Then I should see "Ram Prasad"
+  
+  
   
   
