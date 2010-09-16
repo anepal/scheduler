@@ -1,4 +1,4 @@
--form_for(@doctor, :html => { :multipart => true }) do |f|
+-form_for [@department, @doctor] do |f|
     = f.label :full_name, "Full Name:"
     %br
     = f.text_field :full_name
@@ -14,5 +14,6 @@
     = f.label :email, "Email:"
     %br
     = f.text_field :email
+
     %br
     = f.submit btn
